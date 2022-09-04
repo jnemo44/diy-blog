@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import { format, parseISO} from 'date-fns';
 import { blogPosts } from '../lib/data'
 
 export default function Home() {
@@ -25,13 +26,14 @@ export default function Home() {
 
 function BlogPostList({ slug, title, date, content }) {
   return (
-    <div className="border-green-800 border-2 rounded-lg shadow p-4">
-      <div><Link href={`/blog/${slug}`}>
-        <a className="font-bold">{title}</a>
-      </Link>
+    <Link href={`/blog/${slug}`}>
+    <div className="border-green-800 border-2 rounded-lg shadow hover:shadow-md hover:border-green-500 p-4 transition duration-300 ease-in-out">
+      <div className="font-bold">
+        {title}
       </div>
-      <div>{date}</div>
+      <div className="text-gray-500 text-sm">{format(parseISO(date),'MMMM do, uuu')}</div>
       <div>{content}</div>
     </div>
+    </Link>
   )
 }
