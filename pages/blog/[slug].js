@@ -14,7 +14,7 @@ export default function BlogPage({ title, date, content }) {
                 <div className="border-b-2 border-gray-200 mb-4">
                 <h2 className="text-bold text-xl">{title}</h2>
                 <div className="text-gray-500 text-sm">
-                    {format(parseISO(date),'MMMM do, uuu')}
+                    {date}
                     </div>
                     </div>
                 <div>{content}</div>
@@ -32,7 +32,7 @@ export async function getStaticProps(context) {
         props: {
             ...data,
             content,
-            date: data.date.toISOString(),
+            date: data.date,
         }, // will be passed to the page component as props
     }
 }

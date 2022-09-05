@@ -13,8 +13,8 @@ export default function Home({ posts }) {
       </Head>
 
       <div className="space-y-4">
-        {posts.map((post) => (
-          <BlogPostList key={post.slug} {...post} />
+        {posts.map((item) => (
+          <BlogPostList key={item.slug} {...item} />
         ))}
       </div>
 
@@ -26,11 +26,12 @@ export default function Home({ posts }) {
 
 export async function getStaticProps() {
   const allPosts = getAllPosts();
+  console.log(allPosts)
   return {
     props: {
       posts: allPosts.map(({ data, content, slug }) => ({
         ...data,
-        date: data.date.toISOString(),
+        date: data.date,
         content,
         slug,
       })),
@@ -45,7 +46,7 @@ function BlogPostList({ slug, title, date, content }) {
         <div className="font-bold">
           {title}
         </div>
-        <div className="text-gray-500 text-sm">{format(parseISO(date), 'MMMM do, uuu')}</div>
+        <div className="text-gray-500 text-sm">{date}</div>
         <div>{content}</div>
       </div>
     </Link>

@@ -1,6 +1,6 @@
 ---
 title: Here I go again...
-date: '2021-02-14T19:05:27.220Z'
+date: 2022/08/22
 description: I signed up for CIM, here is why...
 tag: running
 author: Joe Niemiec
