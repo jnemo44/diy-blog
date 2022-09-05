@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { blogPosts } from '../../lib/data';
+import { getAllPosts } from '../../lib/data';
 import { format, parseISO} from 'date-fns';
 
 export default function BlogPage({ title, date, content }) {
@@ -26,15 +26,20 @@ export default function BlogPage({ title, date, content }) {
 
 export async function getStaticProps(context) {
     const { params } = context;
+    const allPosts = getAllPosts();
+    const {data, content} = allPosts.find(post => post.slug === params.slug)
     return {
-        props: blogPosts.find(post => post.slug === params.slug), // will be passed to the page component as props
+        props: {
+            ...data,
+            content,
+            date: data.date.toISOString(),
+        }, // will be passed to the page component as props
     }
 }
 
 export async function getStaticPaths() {
-
     return {
-        paths: blogPosts.map((post) => ({
+        paths: getAllPosts().map((post) => ({
             params: {
                 slug: post.slug,
             },
