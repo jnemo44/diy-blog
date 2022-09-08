@@ -6,7 +6,6 @@ tag: running
 author: Joe Niemiec
 ---
 
-# Week 1 Summary
 It's cool to see how the simple act of registering for a marathon translates into an ability to withstand a bit more pain. *Having a goal with a deadline is in itself a superpower.*
 
 Last week I signed up for **California International Marathon** which was recently dubbed the **2022 USATF Marathon Road Championship** and so I'm off to train!

@@ -1,5 +1,7 @@
 import Head from 'next/head';
 import { getAllPosts } from '../../lib/data';
+import { serialize } from 'next-mdx-remote/serialize'
+import { MDXRemote } from 'next-mdx-remote'
 import { format, parseISO} from 'date-fns';
 
 export default function BlogPage({ title, date, content }) {
@@ -17,7 +19,10 @@ export default function BlogPage({ title, date, content }) {
                     {date}
                     </div>
                     </div>
-                <div>{content}</div>
+                <div className='prose'>
+                <MDXRemote {...content}></MDXRemote>
+                </div>
+                
             </main>
 
         </div>
@@ -28,12 +33,13 @@ export async function getStaticProps(context) {
     const { params } = context;
     const allPosts = getAllPosts();
     const {data, content} = allPosts.find(post => post.slug === params.slug)
+    const mdxSource = await serialize(content)
     return {
         props: {
             ...data,
-            content,
+            content: mdxSource,
             date: data.date,
-        }, // will be passed to the page component as props
+        },
     }
 }
 
