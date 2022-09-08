@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import { format, parseISO } from 'date-fns';
+import { serialize } from 'next-mdx-remote/serialize'
+import { MDXRemote } from 'next-mdx-remote'
 import { getAllPosts } from '../lib/data'
 
 export default function Home({ posts }) {
@@ -26,10 +28,9 @@ export default function Home({ posts }) {
 
 export async function getStaticProps() {
   const allPosts = getAllPosts();
-  console.log(allPosts)
   return {
     props: {
-      posts: allPosts.map(({ data, content, slug }) => ({
+      posts: allPosts.map(({ data, content, slug}) => ({
         ...data,
         date: data.date,
         content,
@@ -39,15 +40,15 @@ export async function getStaticProps() {
   };
 }
 
-function BlogPostList({ slug, title, date, content }) {
+function BlogPostList({ slug, title, date, content}) {
   return (
     <Link href={`/blog/${slug}`}>
-      <div className="border-green-800 border-2 rounded-lg shadow hover:shadow-md hover:border-green-500 p-4 transition duration-300 ease-in-out">
+      <div className="border-gray-200 border-2 rounded-lg shadow hover:shadow-md hover:border-green-500 p-4 transition duration-300 ease-in-out">
         <div className="font-bold">
           {title}
         </div>
         <div className="text-gray-500 text-sm">{date}</div>
-        <div>{content}</div>
+        <div>{content.substr(0,300)}</div>
       </div>
     </Link>
   )
