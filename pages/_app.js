@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div className="mx-auto w-9/12">
+    <div className="mx-auto w-9/12 font-Poppins">
       <header>
         <h1 className="text-2xl font-bold text-center my-4">Joe's Blog</h1>
         <nav className="my-4">
