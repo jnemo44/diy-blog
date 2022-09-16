@@ -9,7 +9,7 @@ export default function About() {
         </Head>
   
         <main>
-          <h1 className="">I'm a nerd</h1>
+          <h1 className="">Hey! I'm a full time flight test engineer still trying to decide what I want to be when I grow up. Follow along as I share what I'm learning both as an engineer and an athlete!</h1>
         </main>
   
       </div>

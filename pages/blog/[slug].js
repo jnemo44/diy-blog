@@ -13,16 +13,19 @@ export default function BlogPage({ title, date, content }) {
             </Head>
 
             <main>
-                <div className="border-b-2 border-gray-200 mb-4">
-                    <h2 className="text-bold text-xl">{title}</h2>
+                <div className="flex flex-col space-y-4">
+                <div className="flex flex-col items-center border-b-2 border-green-500">
+                    <h2 className="font-bold text-xl">{title}</h2>
                     <div className="text-gray-500 text-sm">
                         {date}
                     </div>
                 </div>
-                <div className='prose'>
-                    <MDXRemote {...content}></MDXRemote>
+                <div className="flex flex-col items-center">
+                    <div className='prose'>
+                        <MDXRemote {...content}></MDXRemote>
+                    </div>
                 </div>
-
+                </div>
             </main>
 
         </div>
