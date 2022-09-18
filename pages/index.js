@@ -1,30 +1,16 @@
 import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
+import db from '../lib/db'
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
 import { getAllPosts } from '../lib/data'
 
 // id:6689392
 
-export default function Home({ posts }) {
+export default function Home({ posts, stravaStats }) {
   const [data, setData] = useState(null)
   const [isLoading, setLoading] = useState(false)
-
-  // useEffect(() => {
-  //   setLoading(true)
-  //   fetch('https://www.strava.com/api/v3/athlete',{
-  //     headers: {
-  //       'Authorization' : 'Bearer TOKEN '
-  //     }
-  //   })
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setData(data)
-  //       setLoading(false)
-  //       console.log(data)
-  //     })
-  // }, [])
 
   // useEffect(() => {
   //   setLoading(true)
@@ -56,9 +42,9 @@ export default function Home({ posts }) {
       </div>
 
       <div className="flex space-x-1">
-        {/* <div>{'Total Runs Uploaded: '+ data.all_run_totals.count}</div>
-        <div>{Math.round(data.all_run_totals.distance*0.000621371)+' miles'}</div>
-        <div>{Math.round(data.all_run_totals.elevation_gain*3.28084)+ ' feet'}</div> */}
+        <div>{'Total Runs Uploaded: '+ stravaStats.all_run_totals.count}</div>
+        <div>{Math.round(stravaStats.all_run_totals.distance*0.000621371)+' miles'}</div>
+        <div>{Math.round(stravaStats.all_run_totals.elevation_gain*3.28084)+ ' feet'}</div>
         {/* <div>{data.firstname}</div>
         <div>{data.lastname}</div>
         <div>{'has been a user on Strava since: ' + data.created_at}</div> */}
@@ -72,8 +58,38 @@ export default function Home({ posts }) {
 
 export async function getStaticProps() {
   const allPosts = getAllPosts();
+  const entries = await db.collection('access_tokens').get()
+  let [{access_token, refresh_token}] = entries.docs.map(entry => entry.data())
+  const resToken = await fetch(
+    `https://www.strava.com/api/v3/oauth/token?client_id=${process.env.CLIENT_ID_STRAVA}&client_secret=${process.env.CLIENT_SECRET_STRAVA}&grant_type=refresh_token&refresh_token=${refresh_token}`,
+    {
+      method: 'POST',
+    },
+  )
+  const {
+    access_token: newToken,
+    refresh_token: newRefreshToken,
+  } = await resToken.json()
+  const resStats = await fetch(
+    'https://www.strava.com/api/v3/athletes/6689392/stats',
+    {
+      headers: {
+        Authorization: `Bearer ${newToken}`,
+      },
+    },
+  )
+  db.collection('access_tokens')
+    .doc('W50yW2KWMFL2U0XJGbru')
+    .update({
+      access_token: newToken,
+      refresh_token: newRefreshToken,
+    })
+
+  const stravaStats = await resStats.json()
+
   return {
     props: {
+      stravaStats,
       posts: allPosts.map(({ data, content, slug}) => ({
         ...data,
         date: data.date,
@@ -81,6 +97,7 @@ export async function getStaticProps() {
         slug,
       })),
     },
+    revalidate: 3600,
   };
 }
 
