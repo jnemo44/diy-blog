@@ -15,7 +15,7 @@ export default function Home({ posts }) {
   //   setLoading(true)
   //   fetch('https://www.strava.com/api/v3/athlete',{
   //     headers: {
-  //       'Authorization' : 'Bearer 6c2efdb355c1a2c807f32dc3fd3c88e32c63d0a8 '
+  //       'Authorization' : 'Bearer TOKEN '
   //     }
   //   })
   //     .then((res) => res.json())
@@ -30,7 +30,7 @@ export default function Home({ posts }) {
   //   setLoading(true)
   //   fetch('https://www.strava.com/api/v3/athletes/6689392/stats',{
   //     headers: {
-  //       'Authorization' : 'Bearer 6c2efdb355c1a2c807f32dc3fd3c88e32c63d0a8 '
+  //       'Authorization' : 'Bearer TOKEN '
   //     }
   //   })
   //     .then((res) => res.json())
@@ -91,7 +91,7 @@ function BlogPostList({ slug, title, date, content}) {
         <div className="font-bold">
           {title}
         </div>
-        <div className="text-gray-500 text-sm">{date}</div>
+        <div className="text-slate-500 text-sm">{date}</div>
         <div className='prose'>{content.substr(0,200)}{'...'}</div>
       </div>
     </Link>

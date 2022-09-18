@@ -14,17 +14,30 @@ export default function BlogPage({ title, date, content }) {
 
             <main>
                 <div className="flex flex-col space-y-4">
-                <div className="flex flex-col items-center border-b-2 border-green-500">
-                    <h2 className="font-bold text-xl">{title}</h2>
-                    <div className="text-gray-500 text-sm">
-                        {date}
+                    <div className="flex flex-col items-center border-b-2 border-green-500 space-y-1">
+                        <h2 className="font-bold text-xl">{title}</h2>
+                        <div className="text-gray-500 text-sm pb-2">
+                            {date}
+                        </div>
                     </div>
-                </div>
-                <div className="flex flex-col items-center">
-                    <div className='prose'>
-                        <MDXRemote {...content}></MDXRemote>
+                    <div
+                        className="mx-auto mt-10 bg-white dark:bg-slate-900 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl"
+                    >
+                        <h3
+                            class="text-slate-900 dark:text-white text-base font-medium tracking-tight"
+                        >
+                            Writes Upside-Down
+      </h3>
+                        <p class="text-slate-500 dark:text-slate-400 mt-2 text-sm">
+                            The Zero Gravity Pen can be used to write in any orientation, including
+                            upside-down. It even works in outer space.
+      </p>
                     </div>
-                </div>
+                    <div className="flex flex-col items-center">
+                        <div className='prose dark:text-slate-400'>
+                            <MDXRemote {...content}></MDXRemote>
+                        </div>
+                    </div>
                 </div>
             </main>
 
