@@ -9,23 +9,12 @@ import { getAllPosts } from '../lib/data'
 // id:6689392
 
 export default function Home({ posts, stravaStats }) {
-  const [data, setData] = useState(null)
-  const [isLoading, setLoading] = useState(false)
-
-  // useEffect(() => {
-  //   setLoading(true)
-  //   fetch('https://www.strava.com/api/v3/athletes/6689392/stats',{
-  //     headers: {
-  //       'Authorization' : 'Bearer TOKEN '
-  //     }
-  //   })
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setData(data)
-  //       setLoading(false)
-  //       console.log(data)
-  //     })
-  // }, [])
+  const run_total_miles = Math.round(stravaStats.all_run_totals.distance*0.000621371)
+  const run_total_elevation = Math.round(stravaStats.all_run_totals.elevation_gain*3.28084)
+  const earth_percent_complete = (run_total_miles/24901*100).toFixed(2)
+  const earth_miles_to_go = (24901-run_total_miles).toLocaleString('en-US')
+  const run_total_time = Math.round(stravaStats.all_run_totals.moving_time/120)
+  console.log(stravaStats)
 
   return (
     <div className='font-Poppins'>
@@ -35,6 +24,22 @@ export default function Home({ posts, stravaStats }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <div className="bg-slate-100 border shadow-md rounded-lg space-y-2 p-4 mb-4">
+        <div className="flex flex-col sm:flex-row justify-center md:space-x-4">
+          <div className="text-xl">🏃‍♂️ {run_total_miles.toLocaleString('en-US') +' miles'}</div>
+          <div className="text-xl">⛰️ {run_total_elevation.toLocaleString('en-US') +' feet'}</div>
+          <div className="text-xl">⌛ {run_total_time.toLocaleString('en-US') +' hours'}</div>
+        </div>
+        
+        <div className="text-xl text-center">Progress to circumferencing 24,901 miles around 🌎</div>  
+        <div className="flex rounded-full bg-gray-200">
+          <div className="h-5 text-center text-slate-800 rounded-full bg-green-500" style={{ width: `${earth_percent_complete}%` }}>{earth_percent_complete}%</div>
+          <div className="pl-2 text-sm">{earth_miles_to_go} miles to go!</div>
+        </div>
+      </div>
+
+      <div className="text-xl">Bloggy Words</div>
+
       <div className="space-y-4">
         {posts.map((item) => (
           <BlogPostList key={item.slug} {...item} />
@@ -43,13 +48,13 @@ export default function Home({ posts, stravaStats }) {
 
       <div className="flex space-x-1">
         <div>{'Total Runs Uploaded: '+ stravaStats.all_run_totals.count}</div>
-        <div>{Math.round(stravaStats.all_run_totals.distance*0.000621371)+' miles'}</div>
-        <div>{Math.round(stravaStats.all_run_totals.elevation_gain*3.28084)+ ' feet'}</div>
+        <div></div>
+        <div></div>
         {/* <div>{data.firstname}</div>
         <div>{data.lastname}</div>
         <div>{'has been a user on Strava since: ' + data.created_at}</div> */}
       </div>
-
+      
 
 
     </div>
