@@ -25,20 +25,20 @@ export default function Home({ posts, stravaStats }) {
       </Head>
 
       <div className="bg-slate-100 border shadow-md rounded-lg space-y-2 p-4 mb-4">
-        <div className="flex flex-col sm:flex-row justify-center md:space-x-4">
-          <div className="text-xl">🏃‍♂️ {run_total_miles.toLocaleString('en-US') +' miles'}</div>
-          <div className="text-xl">⛰️ {run_total_elevation.toLocaleString('en-US') +' feet'}</div>
-          <div className="text-xl">⌛ {run_total_time.toLocaleString('en-US') +' hours'}</div>
+        <div className="flex flex-col space-y-2 justify-center items-center sm:flex-row md:space-x-4 md:space-y-0">
+          <div className="text-lg">🏃‍♂️ {run_total_miles.toLocaleString('en-US') +' miles'}</div>
+          <div className="text-lg">⛰️ {run_total_elevation.toLocaleString('en-US') +' feet'}</div>
+          <div className="text-lg">⌛ {run_total_time.toLocaleString('en-US') +' hours'}</div>
         </div>
         
-        <div className="text-xl text-center">Progress to circumferencing 24,901 miles around 🌎</div>  
+        <div className="text-lg text-center">Progress to running around the earth 🌎</div>  
         <div className="flex rounded-full bg-gray-200">
-          <div className="h-5 text-center text-slate-800 rounded-full bg-green-500" style={{ width: `${earth_percent_complete}%` }}>{earth_percent_complete}%</div>
-          <div className="pl-2 text-sm">{earth_miles_to_go} miles to go!</div>
+          <div className="h-5 text-sm text-center text-slate-800 rounded-full bg-green-500" style={{ width: `${earth_percent_complete}%` }}>{earth_percent_complete}%</div>
+          <div className="pl-2 text-sm whitespace-nowrap">{earth_miles_to_go} miles to go!</div>
         </div>
       </div>
 
-      <div className="text-xl">Bloggy Words</div>
+      <div className="text-xl font-bold my-2">Training Summary</div>
 
       <div className="space-y-4">
         {posts.map((item) => (
