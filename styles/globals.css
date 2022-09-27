@@ -4,6 +4,12 @@
 
 @layer base {
     a {
-        @apply hover:text-green-500;
+        @apply hover:text-green-500 font-bold;
+    }
+    div {
+        @apply dark:text-white;
+    }
+    body {
+        @apply dark:bg-slate-900;
     }
 }

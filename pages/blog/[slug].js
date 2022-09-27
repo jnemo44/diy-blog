@@ -2,9 +2,8 @@ import Head from 'next/head';
 import { getAllPosts } from '../../lib/data';
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
-import { format, parseISO } from 'date-fns';
 
-export default function BlogPage({ title, date, content }) {
+export default function BlogPage({ title, date, content, description }) {
     return (
         <div className="font-Poppins">
             <Head>
@@ -20,23 +19,10 @@ export default function BlogPage({ title, date, content }) {
                             {date}
                         </div>
                     </div>
-                    <div
-                        className="mx-auto mt-10 bg-white dark:bg-slate-900 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl"
-                    >
-                        <h3
-                            class="text-slate-900 dark:text-white text-base font-medium tracking-tight"
-                        >
-                            Writes Upside-Down
-      </h3>
-                        <p class="text-slate-500 dark:text-slate-400 mt-2 text-sm">
-                            The Zero Gravity Pen can be used to write in any orientation, including
-                            upside-down. It even works in outer space.
-      </p>
-                    </div>
                     <div className="flex flex-col items-center">
-                        <div className='prose dark:text-slate-400'>
+                        <article className='prose dark:prose-invert'>
                             <MDXRemote {...content}></MDXRemote>
-                        </div>
+                        </article>
                     </div>
                 </div>
             </main>

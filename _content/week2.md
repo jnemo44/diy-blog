@@ -6,7 +6,6 @@ tag: running
 author: Joe Niemiec
 ---
 
-# Week 2 Summary
 Stress is stress is stress. 
     
     Running stress + Work stress + Life stress = Total stress 

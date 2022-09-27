@@ -14,7 +14,6 @@ export default function Home({ posts, stravaStats }) {
   const earth_percent_complete = (run_total_miles/24901*100).toFixed(2)
   const earth_miles_to_go = (24901-run_total_miles).toLocaleString('en-US')
   const run_total_time = Math.round(stravaStats.all_run_totals.moving_time/120)
-  console.log(stravaStats)
 
   return (
     <div className='font-Poppins'>
@@ -24,7 +23,7 @@ export default function Home({ posts, stravaStats }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="bg-slate-100 border shadow-md rounded-lg space-y-2 p-4 mb-4">
+      <div className="bg-slate-100 dark:bg-slate-800 border shadow-md rounded-lg space-y-2 p-4 mb-4">
         <div className="flex flex-col space-y-2 justify-center items-center sm:flex-row md:space-x-4 md:space-y-0">
           <div className="text-lg">🏃‍♂️ {run_total_miles.toLocaleString('en-US') +' miles'}</div>
           <div className="text-lg">⛰️ {run_total_elevation.toLocaleString('en-US') +' feet'}</div>
@@ -33,30 +32,18 @@ export default function Home({ posts, stravaStats }) {
         
         <div className="text-lg text-center">Progress to running around the earth 🌎</div>  
         <div className="flex rounded-full bg-gray-200">
-          <div className="h-5 text-sm text-center text-slate-800 rounded-full bg-green-500" style={{ width: `${earth_percent_complete}%` }}>{earth_percent_complete}%</div>
-          <div className="pl-2 text-sm whitespace-nowrap">{earth_miles_to_go} miles to go!</div>
+          <div className="h-5 text-sm text-center text-slate-800 rounded-full bg-green-500 dark:text-slate-900" style={{ width: `${earth_percent_complete}%` }}>{earth_percent_complete}%</div>
+          <div className="pl-2 text-sm whitespace-nowrap dark:text-slate-900">{earth_miles_to_go} miles to go!</div>
         </div>
       </div>
 
-      <div className="text-xl font-bold my-2">Training Summary</div>
+      <div className="text-2xl font-bold my-2">Training Blog</div>
 
       <div className="space-y-4">
         {posts.map((item) => (
           <BlogPostList key={item.slug} {...item} />
         ))}
       </div>
-
-      <div className="flex space-x-1">
-        <div>{'Total Runs Uploaded: '+ stravaStats.all_run_totals.count}</div>
-        <div></div>
-        <div></div>
-        {/* <div>{data.firstname}</div>
-        <div>{data.lastname}</div>
-        <div>{'has been a user on Strava since: ' + data.created_at}</div> */}
-      </div>
-      
-
-
     </div>
   )
 }
@@ -106,7 +93,7 @@ export async function getStaticProps() {
   };
 }
 
-function BlogPostList({ slug, title, date, content}) {
+function BlogPostList({ slug, title, date, content, description}) {
   return (
     <Link href={`/blog/${slug}`}>
       <div className="border-gray-200 border-2 rounded-lg shadow hover:shadow-md hover:border-green-500 p-4 transition duration-300 ease-in-out">
@@ -114,7 +101,7 @@ function BlogPostList({ slug, title, date, content}) {
           {title}
         </div>
         <div className="text-slate-500 text-sm">{date}</div>
-        <div className='prose'>{content.substr(0,200)}{'...'}</div>
+        <div>{description}</div>
       </div>
     </Link>
   )

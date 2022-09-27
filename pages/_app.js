@@ -7,9 +7,7 @@ function MyApp({ Component, pageProps, test }) {
   const [colorTheme, setTheme] = useDarkMode();
   let currentDate = Date.now()
   let raceDate = new Date("12/4/2022")
-  console.log()
   return (
-    <div className="dark:bg-slate-900 dark:text-slate-200 h-screen bg-scroll">
       <div className="mx-auto w-8/12 font-Poppins">
         <header className='flex w-full justify-between space-x-4'>
           <Link href="/"><a className="text-2xl font-bold my-4 whitespace-nowrap">Joe Niemiec</a></Link>
@@ -30,7 +28,6 @@ function MyApp({ Component, pageProps, test }) {
         </header>
         <Component {...pageProps} />
       </div>
-    </div>
   )
 }
 
