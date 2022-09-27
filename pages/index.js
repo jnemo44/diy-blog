@@ -6,8 +6,6 @@ import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
 import { getAllPosts } from '../lib/data'
 
-// id:6689392
-
 export default function Home({ posts, stravaStats }) {
   const run_total_miles = Math.round(stravaStats.all_run_totals.distance*0.000621371)
   const run_total_elevation = Math.round(stravaStats.all_run_totals.elevation_gain*3.28084)
