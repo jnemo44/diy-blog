@@ -13,6 +13,10 @@ export default function Home({ posts, stravaStats }) {
   const earth_miles_to_go = (24901-run_total_miles).toLocaleString('en-US')
   const run_total_time = Math.round(stravaStats.all_run_totals.moving_time/120)
 
+  posts.sort((a, b) => {
+    return (new Date(b.date) - new Date(a.date))
+  })
+
   return (
     <div className='font-Poppins'>
       <Head>
