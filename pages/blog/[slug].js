@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { getAllPosts } from '../../lib/data';
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
+import MarkdownSample from '../../_content/sample.mdx'
 
 export default function BlogPage({ title, date, content, description }) {
     return (
@@ -20,9 +21,10 @@ export default function BlogPage({ title, date, content, description }) {
                         </div>
                     </div>
                     <div className="flex flex-col items-center shrink">
-                        <article className='prose dark:prose-invert max-w-prose'>
-                            <MDXRemote {...content}></MDXRemote>
-                        </article>
+                    <article className='prose dark:prose-invert max-w-prose'>
+                            {/* <MDXRemote {...content}></MDXRemote> */}
+                            <MarkdownSample></MarkdownSample>
+                    </article>  
                     </div>
                 </div>
             </main>
@@ -40,7 +42,7 @@ export async function getStaticProps(context) {
         props: {
             ...data,
             content: mdxSource,
-            date: data.date,
+            //date: data.date,
         },
     }
 }

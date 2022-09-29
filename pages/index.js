@@ -5,6 +5,7 @@ import db from '../lib/db'
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
 import { getAllPosts } from '../lib/data'
+import MarkdownSample from '../_content/sample.mdx'
 
 export default function Home({ posts, stravaStats }) {
   const run_total_miles = Math.round(stravaStats.all_run_totals.distance*0.000621371)
@@ -12,6 +13,8 @@ export default function Home({ posts, stravaStats }) {
   const earth_percent_complete = (run_total_miles/24901*100).toFixed(2)
   const earth_miles_to_go = (24901-run_total_miles).toLocaleString('en-US')
   const run_total_time = Math.round(stravaStats.all_run_totals.moving_time/120)
+
+  const workouts = {id:1,focus:37, reps:45, totalTime: 43, totalDistance:456}
 
   return (
     <div className='font-Poppins'>
@@ -42,6 +45,9 @@ export default function Home({ posts, stravaStats }) {
           <BlogPostList key={item.slug} {...item} />
         ))}
       </div>
+      
+      <article className="prose"><MarkdownSample workouts={workouts}></MarkdownSample></article>
+
     </div>
   )
 }
@@ -82,7 +88,7 @@ export async function getStaticProps() {
       stravaStats,
       posts: allPosts.map(({ data, content, slug}) => ({
         ...data,
-        date: data.date,
+        //date: data.date,
         content,
         slug,
       })),
