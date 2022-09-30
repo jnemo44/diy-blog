@@ -7,7 +7,7 @@ export default function About() {
         <title>About</title>
         <link rel="icon" href="../favicon.ico" />
       </Head>
-      <div className="flex space-x-4 font-bold text-xl justify-center border-b-2 border-green-500 mb-2">
+      <div className="flex space-x-4 font-bold text-base md:text-lg justify-center border-b-2 border-green-500 mb-2">
         <div className="">Dad 👨‍👩‍👧‍👦</div>
         <div className="">Runner 🏃</div>
         <div className="">Engineer 🤓</div>

@@ -19,7 +19,7 @@ export default function BlogPage({ title, date, content, description }) {
                             {date}
                         </div>
                     </div>
-                    <div className="flex flex-col items-center shrink">
+                    <div className="flex flex-col sm:items-center shrink">
                         <article className='prose dark:prose-invert max-w-prose'>
                             <MDXRemote {...content}></MDXRemote>
                         </article>

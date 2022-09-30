@@ -26,8 +26,9 @@ I also ❤️❤️ progressive long runs. During the warmup miles my legs felt 
 
 ### **Workouts**
 
-<table className="w-full text-sm text-left">
-  <thead className="text-xs border-b-2 border-green-500 uppercase bg-slate-100 dark:bg-slate-800">
+<div className="overflow-x-auto">
+<table className="min-w-full inline-block text-left">
+  <thead className="border-b-2 border-green-500 uppercase bg-slate-100 dark:bg-slate-800">
   <tr>
     <th className="py-3 px-6">Focus </th>
     <th className="py-3 px-6">Reps</th>
@@ -48,6 +49,7 @@ I also ❤️❤️ progressive long runs. During the warmup miles my legs felt 
     <td className="py-4 px-6">17</td>
   </tr>
 </table>
+</div>
 
 ## **Health**
 Left knee bounced back by the Wednesday workout and havn't felt it the rest of the week. Trying to manage general fatigue and what I like to call my long run hangover. No headache or vommiting I just feel kinda like a low energy zombie 30 hours after a long run.
