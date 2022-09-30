@@ -32,7 +32,7 @@ The 800 workout this week felt light relative to last week. Most likley due to t
   </thead>
   <tr className="bg-white border-b dark:bg-slate-800 dark:border-slate-800">
     <td className="py-4 px-6">Intervals</td>
-    <td className="py-4 px-6">6 x 800m @ 4:50 pace, 2:30 recovery /td>
+    <td className="py-4 px-6">6 x 800m @ 4:50 pace, 2:30 recovery </td>
     <td className="py-4 px-6">1:03:31</td>
   </tr>
   <tr className="bg-white border-b dark:bg-slate-800 dark:border-slate-800">
