@@ -11,7 +11,7 @@ export default function Home({ posts, stravaStats }) {
   const run_total_elevation = Math.round(stravaStats.all_run_totals.elevation_gain*3.28084)
   const earth_percent_complete = (run_total_miles/24901*100).toFixed(2)
   const earth_miles_to_go = (24901-run_total_miles).toLocaleString('en-US')
-  const run_total_time = Math.round(stravaStats.all_run_totals.moving_time/120)
+  const run_total_time = Math.round(stravaStats.all_run_totals.moving_time/3600)
 
   posts.sort((a, b) => {
     return (new Date(b.date) - new Date(a.date))
