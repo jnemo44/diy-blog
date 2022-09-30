@@ -16,18 +16,18 @@ export default function About() {
       <main className="flex justify-center shrink">
 
         <article className="prose dark:prose-invert">
-          <p>Hi! I'm Joe.</p>
+          <p>{"Hi! I'm Joe."}</p>
 
           <p>
-            I'm currently a full time flight test engineer 🛩️ that's still trying to decide what I want to be when I grow up 🧙. I love running and enjoy building things online so this is my space to combine 🏃‍♂️ ➕ 💻.
+            {"I'm currently a full time flight test engineer 🛩️ that's still trying to decide what I want to be when I grow up 🧙. I love running and enjoy building things online so this is my space to combine 🏃‍♂️ ➕ 💻."}
           </p>
           <p> 
-            Follow along as I test web development ideas and write about the glamorous life of a semi-pro runner!   
+          {"Follow along as I test web development ideas and write about the glamorous life of a semi-pro runner!"}   
           </p>
 
           <p>
-            Oh and about the stats card on the home page. I started uploading runs to Strava in 2014 after I graduated from college. So the total miles number
-            does not include anything from my time as a runner in highschool or college where I was a division ✌ XC and track runner. And I like it that way. I want to show people that awesome fitness can carry on long after school, a job, marriage, and possibly even 4 kids!
+            {"Oh and about the stats card on the home page. I started uploading runs to Strava in 2014 after I graduated from college. So the total miles number"}
+            {"does not include anything from my time as a runner in highschool or college where I was a division ✌ XC and track runner. And I like it that way. I want to show people that awesome fitness can carry on long after school, a job, marriage, and possibly even 4 kids!"}
           </p>
 
           <div className="font-bold text-xl">The Linkages 🔗</div>
