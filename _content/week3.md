@@ -29,7 +29,7 @@ Both Saturday and Sunday were days I'd have rather just curled up on the couch a
 <table className="w-full text-sm text-left">
   <thead className="text-xs uppercase bg-slate-100 dark:bg-slate-800">
   <tr>
-    <th className="py-3 px-6">Focus </th>
+    <th className="py-3 px-6">Focus</th>
     <th className="py-3 px-6">Reps</th>
     <th className="py-3 px-6">Total Duration</th>
   </tr>
