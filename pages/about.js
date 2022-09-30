@@ -8,7 +8,7 @@ export default function About() {
         <link rel="icon" href="../favicon.ico" />
       </Head>
       <div className="flex space-x-4 font-bold text-xl justify-center border-b-2 border-green-500 mb-2">
-        <div className="">Dad 👨‍👩‍👧‍👦  </div>
+        <div className="">Dad 👨‍👩‍👧‍👦</div>
         <div className="">Runner 🏃</div>
         <div className="">Engineer 🤓</div>
       </div>
@@ -19,10 +19,10 @@ export default function About() {
           <p>Hi! I'm Joe.</p>
 
           <p>
-            I'm currently a full time flight test engineer 🛩️ that's still trying to decide what I want to be when I grow up 🧙. I'm a decent runner and I enjoy building things online so this is my space to combine these two pursuits.
+            I'm currently a full time flight test engineer 🛩️ that's still trying to decide what I want to be when I grow up 🧙. I love running and enjoy building things online so this is my space to combine 🏃‍♂️ ➕ 💻.
           </p>
           <p> 
-            Follow along as I test web development ideas and share some of my training as a runner!   
+            Follow along as I test web development ideas and write about the glamorous life of a semi-pro runner!   
           </p>
 
           <p>
@@ -30,7 +30,7 @@ export default function About() {
             does not include anything from my time as a runner in highschool or college where I was a division ✌ XC and track runner. And I like it that way. I want to show people that awesome fitness can carry on long after school, a job, marriage, and possibly even 4 kids!
           </p>
 
-          <div className="font-bold text-xl">The Linkages</div>
+          <div className="font-bold text-xl">The Linkages 🔗</div>
 
           <ul>
             <li>Fighting to end slavery. <a href="https://www.gofundme.com/f/elite-racing-benefitting-our?utm_campaign=p_cf+share-flow-1&utm_medium=copy_link&utm_source=customer"> Join the Fight!</a></li>
