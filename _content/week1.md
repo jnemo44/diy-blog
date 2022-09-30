@@ -24,10 +24,26 @@ It's been a gradual increase to the maintanance fitness I have been doing for th
 ---------------------------
 
 ### Workouts
-| Focus       | Reps        | Total Duration |       
-| :----:  | :----: | :----:  |
-| Light Speed | 10 x 1 minute on/off| 48:47  |
-| Progression  | 4 mi @ 5:36 (M+20) + 2 mi @ 5:19 (M)|     1:12:52    |
+
+<table className="w-full text-sm text-left">
+  <thead className="text-xs uppercase bg-slate-100 dark:bg-slate-800">
+  <tr>
+    <th className="py-3 px-6">Focus </th>
+    <th className="py-3 px-6">Reps</th>
+    <th className="py-3 px-6">Total Duration</th>
+  </tr>
+  </thead>
+  <tr className="bg-white border-b dark:bg-slate-800 dark:border-slate-800">
+    <td className="py-4 px-6">Light Speed</td>
+    <td className="py-4 px-6">10 x 1 minute on/off</td>
+    <td className="py-4 px-6">48:47</td>
+  </tr>
+  <tr className="bg-white border-b dark:bg-slate-800 dark:border-slate-800">
+    <td className="py-4 px-6">Progression</td>
+    <td className="py-4 px-6">4 mi @ 5:36 (M+20) + 2 mi @ 5:19 (M)</td>
+    <td className="py-4 px-6">1:12:52</td>
+  </tr>
+</table>
 
 ## Health
 

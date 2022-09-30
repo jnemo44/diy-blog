@@ -29,10 +29,27 @@ The first quality session was done on a treadmill and felt fairly easy albiet fa
 
 
 ### Workouts
-| Focus       | Reps        | Total Duration |       
-| :----:  | :----: | :----:  |
-| Ladder Work | 2 reps of 6,4,3,2 hundreds even rest (5:09-4:30 pace)| 56:20  |
-| Threshold with Fast Reps  | 5x1 mile @ 5:20, 2 min jog + 6x200 meters @ 34 sec|     1:14:28   |
+
+<table className="w-full text-sm text-left">
+  <thead className="text-xs uppercase bg-slate-100 dark:bg-slate-800">
+  <tr>
+    <th className="py-3 px-6">Focus </th>
+    <th className="py-3 px-6">Reps</th>
+    <th className="py-3 px-6">Total Duration</th>
+  </tr>
+  </thead>
+  <tr className="bg-white border-b dark:bg-slate-800 dark:border-slate-800">
+    <td className="py-4 px-6">Ladder Work</td>
+    <td className="py-4 px-6">2 reps of 6,4,3,2 hundreds even rest (5:09-4:30 pace)</td>
+    <td className="py-4 px-6">56:20</td>
+  </tr>
+  <tr className="bg-white border-b dark:bg-slate-800 dark:border-slate-800">
+    <td className="py-4 px-6">Threshold with Fast Reps</td>
+    <td className="py-4 px-6">5x1 mile @ 5:20, 2 min jog + 6x200 meters @ 34 sec</td>
+    <td className="py-4 px-6">1:14:28</td>
+  </tr>
+</table>
+
 
 ## Health
 Legs feel healthy, but I did essentially miss Tuesday due to a mild stomach bug. Or maybe I was just nervous for a work presentation I had the following day. No other issues this week!
