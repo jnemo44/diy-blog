@@ -26,13 +26,13 @@ export default function Home({ posts, stravaStats }) {
       </Head>
 
       <div className="bg-slate-100 dark:bg-slate-800 border shadow-md rounded-lg space-y-2 p-4 mb-4">
-        <div className="flex flex-col space-y-2 justify-center items-center sm:flex-row md:space-x-4 md:space-y-0">
-          <div className="text-lg">🏃‍♂️ {run_total_miles.toLocaleString('en-US') +' miles'}</div>
-          <div className="text-lg">⛰️ {run_total_elevation.toLocaleString('en-US') +' feet'}</div>
-          <div className="text-lg">⌛ {run_total_time.toLocaleString('en-US') +' hours'}</div>
+        <div className="flex flex-col text-base space-x-2 space-y-2 justify-center items-center sm:flex-row md:space-x-4 md:text-lg sm:space-y-0">
+          <div>🏃‍♂️ {run_total_miles.toLocaleString('en-US') +' miles'}</div>
+          <div>⛰️ {run_total_elevation.toLocaleString('en-US') +' feet'}</div>
+          <div>⌛ {run_total_time.toLocaleString('en-US') +' hours'}</div>
         </div>
         
-        <div className="text-lg text-center">Progress to running around the earth 🌎</div>  
+        <div className="text-base md:text-lg text-center">Progress to running around the earth 🌎</div>  
         <div className="flex rounded-full bg-gray-200">
           <div className="h-5 text-sm text-center text-slate-800 rounded-full bg-green-500 dark:text-slate-900" style={{ width: `${earth_percent_complete}%` }}>{earth_percent_complete}%</div>
           <div className="pl-2 text-sm whitespace-nowrap dark:text-slate-900">{earth_miles_to_go} miles to go!</div>
