@@ -35,8 +35,8 @@ export default function Home({ posts, stravaStats }) {
         
         <div className="text-sm sm:text-base md:text-lg text-center">Progress to running around the earth 🌎</div>  
         <div className="flex rounded-full bg-gray-200">
-          <div className="h-5 text-sm text-center text-slate-800 rounded-full bg-green-500 dark:text-slate-900" style={{ width: `${earth_percent_complete}%` }}>{earth_percent_complete}%</div>
-          <div className="pl-2 text-sm whitespace-nowrap dark:text-slate-900">{earth_miles_to_go} miles to go!</div>
+          <div className="z-10 shrink-0 h-5 text-sm text-center text-slate-800 rounded-full bg-green-500 dark:text-slate-900" style={{ width: `${earth_percent_complete}%` }}>{earth_percent_complete}%</div>
+          <div className="overflow-x-auto z-0 pl-2 text-sm whitespace-nowrap dark:text-slate-900">{earth_miles_to_go} miles to go!</div>
         </div>
       </div>
 
