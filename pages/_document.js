@@ -23,6 +23,10 @@ class MyDocument extends Document {
           <meta name="twitter:title" content="Joe Niemiec" />
           <meta name="twitter:description" content="Exploring the web while running for days" />
           <meta name="twitter:image" content="/joeRunning.JPG" />
+          <meta property="og:site_name" content="Joe Niemiec" />
+          <meta property="og:description" content="Exploring the web while running for days" />
+          <meta property="og:title" content="Joe Niemiec" />
+          <meta property="og:image" content="/joeRunning.JPG" />
         </Head>
         <body>
           <Main />
