@@ -21,8 +21,16 @@ export default function handler(req, res) {
       }
     }
 
-  } else {
+  } else if (req.method === 'POST') {
+    // Handle webhook PUSH
+    console.log(req)
+    console.log(req.updates)
+    console.log(req.event_time)
+    
+  }
+  else {
     // Handle any other HTTP method
+    console.log('else')
   }
 }
 
