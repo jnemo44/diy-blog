@@ -9,7 +9,7 @@ export default function About() {
         </Head>
   
         <main>
-          <h1 className="text-xl font-bold">STATS</h1>
+          <h1 className="text-xl font-bold">STATS!</h1>
         </main>
   
       </div>
