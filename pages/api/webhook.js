@@ -26,6 +26,7 @@ export default function handler(req, res) {
     console.log(req)
     console.log(req.updates)
     console.log(req.event_time)
+    console.log(req.object_id)
     
   }
   else {
