@@ -1,4 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import db from '../lib/db'
+
 
 export default function handler(req, res) {
   if (req.method === 'GET') {
@@ -27,6 +29,13 @@ export default function handler(req, res) {
     console.log(req.updates)
     console.log(req.event_time)
     console.log(req.object_id)
+
+    db.collection('access_tokens')
+    .doc('W50yW2KWMFL2U0XJGbru')
+    .update({
+      object_id: req.object_id,
+      request: req,
+    })
     
   }
   else {
