@@ -40,7 +40,11 @@ export default function handler(req, res) {
   }
   else {
     // Handle any other HTTP method
-    console.log('else')
+    db.collection('error_data')
+    .doc('dVO9Otfq4yBAdR4dkHBU')
+    .update({
+      error: req,
+    })
   }
 }
 
