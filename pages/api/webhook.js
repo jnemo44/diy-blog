@@ -1,5 +1,5 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import db from '../lib/db'
+import db from "../../lib/db"
 
 
 export default function handler(req, res) {
@@ -30,8 +30,8 @@ export default function handler(req, res) {
     console.log(req.event_time)
     console.log(req.object_id)
 
-    db.collection('access_tokens')
-    .doc('W50yW2KWMFL2U0XJGbru')
+    db.collection('strava_data')
+    .doc('hP8d1Y61Id6uQ5B7DgEW')
     .update({
       object_id: req.object_id,
       request: req,
