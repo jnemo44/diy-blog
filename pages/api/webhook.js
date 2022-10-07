@@ -36,6 +36,7 @@ export default function handler(req, res) {
         owner_id: req.query.owner_id,
         subscription_id: req.query.subscription_id,
         update_date: currentDate,
+        updates: req.query?.updates,
       })
       return res.sendStatus(200).json(currentDate);    
     }
