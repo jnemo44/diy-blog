@@ -2,18 +2,15 @@ import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import db from '../lib/db'
-import { serialize } from 'next-mdx-remote/serialize'
-import { MDXRemote } from 'next-mdx-remote'
 import { getAllPosts } from '../lib/data'
 
-export default function Home({ posts, stravaStats, weather }) {
+export default function Home({ posts, stravaStats }) {
   const run_total_miles = Math.round(stravaStats.all_run_totals.distance*0.000621371)
   const run_total_elevation = Math.round(stravaStats.all_run_totals.elevation_gain*3.28084)
   const earth_percent_complete = (run_total_miles/24901*100).toFixed(2)
   const earth_miles_to_go = (24901-run_total_miles).toLocaleString('en-US')
   const run_total_time = Math.round(stravaStats.all_run_totals.moving_time/3600)
 
-  console.log(weather)
   posts.sort((a, b) => {
     return (new Date(b.date) - new Date(a.date))
   })
@@ -41,9 +38,6 @@ export default function Home({ posts, stravaStats, weather }) {
         </div>
       </div>
 
-      <div>{weather.main.temp}</div>
-      <div>{weather.dewPoint}</div>
-
       <div className="text-2xl font-bold my-2">Training Blog</div>
 
       <div className="space-y-4">
@@ -56,8 +50,6 @@ export default function Home({ posts, stravaStats, weather }) {
 }
 
 export async function getStaticProps() {
-  const lat = 30.484117
-  const lon = -86.417262
   const allPosts = getAllPosts();
   const entries = await db.collection('access_tokens').get()
   let [{access_token, refresh_token}] = entries.docs.map(entry => entry.data())
@@ -90,27 +82,13 @@ export async function getStaticProps() {
 
   const stravaStats = await resStats.json()
 
-  //Fetch Weather
-  const resWeather = await fetch(
-    `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${process.env.WEATHER_KEY}&units=imperial`
-  )
-
- 
-  const weatherInfo = await resWeather.json()
-  console.log(weatherInfo)
-  //const alphaTRH = Math.log(weatherInfo.main.humidity/100)+((17.625*weatherInfo.main.temp)/(469.472+weatherInfo.main.temp))
-  //const DP = (469.472 * alphaTRH) / (17.625 - alphaTRH)
-  const temp_c = (weatherInfo.main.temp-32)*(5/9)
-  let dewPoint = 243.04*(Math.log(weatherInfo.main.humidity/100)+((17.625*temp_c)/(243.04+temp_c)))/(17.625-Math.log(weatherInfo.main.humidity/100)-((17.625*temp_c)/(243.04+temp_c)))
-  dewPoint = dewPoint*(9/5)+32
-  // console.log(dewPoint)
   return {
     props: {
       stravaStats,
-      weather: {
-        ...weatherInfo,
-        dewPoint:dewPoint,
-      },
+      //weather: {
+      //  ...weatherInfo,
+      //  dewPoint:dewPoint,
+      //},
       posts: allPosts.map(({ data, content, slug}) => ({
         ...data,
         date: data.date,

@@ -1,9 +1,10 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import db from "../../lib/db"
-
+import db from "../../lib/db";
+import { getWeather } from "../../lib/util";
 
 export default function handler(req, res) {
-  var currentDate = new Date().toString()  
+  var currentDate = new Date().toString()
+  console.log("WEBHOOK FIRED")  
   if (req.method === 'GET') {
       console.log('GET')
       // Process a GET request
@@ -21,24 +22,28 @@ export default function handler(req, res) {
           res.json({ "hub.challenge": challenge });
         } else {
           // Responds with '403 Forbidden' if verify tokens do not match
-          return res.sendStatus(403);
+          return res.status(403);
         }
       }
     } else if (req.method === 'POST') {
+      //3a36c3484bf9289bb1918fbb98150a2f098f2aca
       // Handle webhook PUSH
-      db.collection('strava_data')
-      .doc('hP8d1Y61Id6uQ5B7DgEW')
-      .update({
-        object_id: req.query.object_id,
-        object_type: req.query.object_type,
-        aspect_type: req.query.aspect_type,
-        event_time: req.query.event_time,
-        owner_id: req.query.owner_id,
-        subscription_id: req.query.subscription_id,
-        update_date: currentDate,
-        updates: req.query?.updates,
-      })
-      return res.sendStatus(200).json(currentDate);    
+      // db.collection('strava_data')
+      // .doc('hP8d1Y61Id6uQ5B7DgEW')
+      // .update({
+      //   object_id: req.body.object_id,
+      //   object_type: req.body.object_type,
+      //   aspect_type: req.body.aspect_type,
+      //   event_time: req.body.event_time,
+      //   owner_id: req.body.owner_id,
+      //   subscription_id: req.body.subscription_id,
+      //   update_date: currentDate,
+      //   updates: req.body?.updates,
+      // })
+      console.log(req.body)
+      //getWeather()
+      res.status(200).json({ message: 'Success!' });
+  
     }
     else {
       // Handle any other HTTP method
@@ -48,7 +53,7 @@ export default function handler(req, res) {
         error: currentDate,
       })
     }
-    return res.sendStatus(400).json(currentDate); 
+    //return res.sendStatus(400).json(currentDate); 
 }
 
 
