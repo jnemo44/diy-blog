@@ -26,7 +26,9 @@ export default function BlogPage({ title, date, content, description }) {
                     </div>
                 </div>
             </main>
+            <div className="h-10">
 
+            </div>
         </div>
     )
 }

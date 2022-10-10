@@ -47,6 +47,9 @@ export default function Home({ posts, stravaStats }) {
           <BlogPostList key={item.slug} {...item} />
         ))}
       </div>
+      <div className="h-12">
+
+      </div>
     </div>
   )
 }
