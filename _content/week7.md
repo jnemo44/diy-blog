@@ -1,7 +1,7 @@
 ---
 title: Week 7 Summary
 date: 2022/10/10
-description: On the struggle bus
+description: A two day ticket for a joy ride on the struggle bus
 tag: running
 author: Joe Niemiec
 ---
