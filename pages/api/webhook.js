@@ -21,7 +21,7 @@ export default function handler(req, res) {
           res.json({ "hub.challenge": challenge });
         } else {
           // Responds with '403 Forbidden' if verify tokens do not match
-          return res.sendStatus(403);
+          return res.status(403);
         }
       }
     } else if (req.method === 'POST') {
@@ -38,7 +38,7 @@ export default function handler(req, res) {
         update_date: currentDate,
         updates: req.body?.updates,
       })
-      return res.sendStatus(200).json(currentDate);    
+      return res.status(200).json(currentDate);    
     }
     else {
       // Handle any other HTTP method
@@ -47,8 +47,9 @@ export default function handler(req, res) {
       .update({
         error: currentDate,
       })
+      return res.status(400).json(currentDate);
     }
-    return res.sendStatus(400).json(currentDate); 
+    
 }
 
 

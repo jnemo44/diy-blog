@@ -31,6 +31,7 @@ Normally my RHR is **~39 bpm**, but to see the linear increase up to almost **50
 
 Not **EVERY** week can be the best week ever, but if you can hang in there through the bad weeks that's when the **magic** happens! This week was just a minor speed bump in what I hope will continue to be an awesome marathon buildup!
 
+---------------------------
 
 ## **The Work**
 
