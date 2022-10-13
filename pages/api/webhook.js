@@ -26,6 +26,7 @@ export default function handler(req, res) {
       }
     } else if (req.method === 'POST') {
       // Handle webhook PUSH
+      db.settings({ ignoreUndefinedProperties: true })
       db.collection('strava_data')
       .doc('hP8d1Y61Id6uQ5B7DgEW')
       .update({
