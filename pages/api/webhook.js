@@ -26,7 +26,8 @@ export default function handler(req, res) {
       }
     } else if (req.method === 'POST') {
       // Handle webhook PUSH
-      db.settings({ ignoreUndefinedProperties: true })
+      console.log(req.body);
+      //db.settings({ ignoreUndefinedProperties: true })
       db.collection('strava_data')
       .doc('hP8d1Y61Id6uQ5B7DgEW')
       .update({
@@ -37,7 +38,7 @@ export default function handler(req, res) {
         owner_id: req.body.owner_id,
         subscription_id: req.body.subscription_id,
         update_date: currentDate,
-        updates: req.body?.updates,
+        updates: req.body.updates,
       })
       return res.status(200).json(currentDate);    
     }
