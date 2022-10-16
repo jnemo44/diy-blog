@@ -2,7 +2,7 @@
 import db from "../../lib/db"
 
 
-export default function handler(req, res) {
+export default async function handler(req, res) {
   var currentDate = new Date().toString()  
   if (req.method === 'GET') {
       console.log('GET')
@@ -28,7 +28,7 @@ export default function handler(req, res) {
       // Handle webhook PUSH
       //console.log(req.body);
       //db.settings({ ignoreUndefinedProperties: true })
-      db.collection('strava_data')
+      await db.collection('strava_data')
       .doc('hP8d1Y61Id6uQ5B7DgEW')
       .update({
         object_id: req.body.object_id,
