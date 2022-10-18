@@ -1,26 +1,25 @@
 ---
-title: My wife won't read this
+title: My wife won't read this...
 date: 2022/10/17
-description: 
+description: This is my week 8 training summary
 tag: running
 author: Joe Niemiec
 ---
-**HI JASMIN!!!!** You'll be so happy to know that due to my stomach bug last week, I had leg energy for 7 days of running in week 8. This resulted in a high watermark of XX miles for this marathon buildup.
+**My wife said she wouldn't read this unless I changed the title to be more interesting** Apparently Week 8 isn't colorful enough? Anyways **HI WIFE!!!!** welcome to my blog. You'll be so happy to know that due to my stomach bug last week, I had leg energy for 7 days of running in week 8! This resulted in a high watermark of 68 miles which is the Joe equivalent of **HIGH** mileage.
 
-I am **NOT** a high mileage runner. I've actually only ever gone over 100 miles per week like once or twice and that was back in college. I've found that my probability of injury sky rockets when I approach 80-90 miles so my "high" mileage sweet spot is around **70 mpw**. In fact for my PR marathon of 2:17 I was right around 70 mpw. It's better to be undertrained and healthy then overtrained and broken. 
+Let me be clear I am **NOT** a high mileage runner (typically considered >100mpw). I've actually only ever gone over 100 miles per week like once or twice in my life and that was back in college. I've found that my probability of injury sky rockets when I approach 80-90 miles so my "high" mileage sweet spot is around **70 mpw**. In fact for my PR marathon of 2:17 I was right around 70 mpw. I've found it's better to be undertrained and healthy then overtrained and broken. 
 
-My secret weapon is training my mind to be strong on race day with visualization and treating race day like a professional
+**Bottom line** everyone's body is different and you need to play to your strengths. For me that's 70 some mpw and a strong mind!
 
 --------------------------- 
 
 ## **The Work**
 
+#### **Distance:** 67.97 miles
 
-#### **Distance:** 66.31 miles (+6.31 miles)  
+#### **Time:** 8 hours 14 minutes
 
-#### **Time:** 7 hours 49 minutes (+38 minutes)
-
-#### **Elevation Gain:** 1,686 feet  
+#### **Elevation Gain:** 1,296 feet  
 
 ---------------------------
 
@@ -38,15 +37,15 @@ My secret weapon is training my mind to be strong on race day with visualization
   </thead>
   <tr className="bg-white border-b-2 border-green-500 dark:bg-slate-800">
     <td className="py-4 px-6">Speed reps</td>
-    <td className="py-4 px-6">20 x 200m @ </td>
-    <td className="py-4 px-6">1:13:00</td>
-    <td className="py-4 px-6">11.1</td>
+    <td className="py-4 px-6">3 W/U, 20 x 200m @ 4:26 pace with 200m recovery, 2 C/D</td>
+    <td className="py-4 px-6">56:44</td>
+    <td className="py-4 px-6">9.85</td>
   </tr>
   <tr className="bg-white border-b-2 border-green-500 dark:bg-slate-800">
     <td className="py-4 px-6">Mile Repeats</td>
-    <td className="py-4 px-6">3 mile W/U, 7 x 1 mile @ 5:11, 2 mile C/D </td>
-    <td className="py-4 px-6"></td>
-    <td className="py-4 px-6"></td>
+    <td className="py-4 px-6">3 mile W/U, 7 x 1 mile @ 5:11 75 sec recovery, 2 mile C/D </td>
+    <td className="py-4 px-6">1:20:45</td>
+    <td className="py-4 px-6">12.7</td>
   </tr>
 </table>
 </div>
