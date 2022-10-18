@@ -1,9 +1,10 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import db from "../../lib/db"
-
+import db from "../../lib/db";
+import { getWeather } from "../../lib/util";
 
 export default async function handler(req, res) {
-  var currentDate = new Date().toString()  
+  var currentDate = new Date().toString()
+  console.log("WEBHOOK FIRED")  
   if (req.method === 'GET') {
       console.log('GET')
       // Process a GET request
@@ -40,7 +41,46 @@ export default async function handler(req, res) {
         update_date: currentDate,
         updates: req.body.updates,
       })
-      return res.status(200).json(currentDate);    
+
+      // If aspect_type is 'create' && run && probably some other things GET strava activity by object ID
+      if (req.body.aspect_type === 'create') {
+        const token = await db.collection('access_tokens').doc('W50yW2KWMFL2U0XJGbru').get()
+        const newestActivity = await fetch(
+          `https://www.strava.com/api/v3/activities/${req.body.object_id}`,
+          {
+            headers: {
+              Authorization: `Bearer ${token.data().access_token}`,
+            },
+          },
+        )
+        const activityData = await newestActivity.json()
+        const time = new Date(activityData.start_date_local).getTime()
+
+        // If aspect_type is create then get weather for that time
+        let weather = await getWeather(activityData.start_latlng[0], activityData.start_latlng[1], time/1000)
+        // Form a PUT request to update the new activity with weather info
+        const updateActivity = await fetch(
+          `https://www.strava.com/api/v3/activities/${req.body.object_id}`,
+          {
+            method: 'PUT',
+            headers: {
+              Authorization: `Bearer ${token.data().access_token}`,
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({"description": `🚀 Temp: ${Math.round(weather.data[0].temp)}F Dew Point: ${Math.round(weather.data[0].dew_point)}F Felt Like: ${Math.round(weather.data[0].feels_like)}F\r`}),
+            //🏁 Temp: ${Math.round(weather.data[0].temp)}F Dew Point: ${Math.round(weather.data[0].dew_point)}F Felt Like: ${Math.round(weather.data[0].feels_like)}F
+          },
+        )
+
+        console.log(updateActivity)
+      }
+      
+
+      
+      
+      
+      res.status(200).json({ message: 'Success!' });
+  
     }
     else {
       // Handle any other HTTP method
