@@ -5,7 +5,9 @@ description: This is my week 8 training summary
 tag: running
 author: Joe Niemiec
 ---
-**My wife said she wouldn't read this unless I changed the title to be more interesting** Apparently Week 8 isn't colorful enough? Anyways **HI WIFE!!!!** welcome to my blog. You'll be so happy to know that due to my stomach bug last week, I had leg energy for 7 days of running in week 8! This resulted in a high watermark of 68 miles which is the Joe equivalent of **HIGH** mileage.
+**My wife said she wouldn't read this unless I changed the title to be more interesting** Apparently my Week followed by the number of total weeks marathon training isn't colorful enough?
+
+Anyways **HI WIFE!!!!** welcome to my blog. You'll be so happy to know that due to my stomach bug last week, I had leg energy for 7 days of running in week 8! This resulted in a high watermark of 68 miles which is the Joe equivalent of **HIGH** mileage.
 
 Let me be clear I am **NOT** a high mileage runner (typically considered >100mpw). I've actually only ever gone over 100 miles per week like once or twice in my life and that was back in college. I've found that my probability of injury sky rockets when I approach 80-90 miles so my "high" mileage sweet spot is around **70 mpw**. In fact for my PR marathon of 2:17 I was right around 70 mpw. I've found it's better to be undertrained and healthy then overtrained and broken. 
 
