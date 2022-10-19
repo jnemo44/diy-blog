@@ -9,9 +9,9 @@ author: Joe Niemiec
 
 Anyways **HI WIFE!!!!** welcome to my blog. You'll be so happy to know that due to my stomach bug last week, I had leg energy for 7 days of running in week 8! This resulted in a high watermark of 68 miles which is the Joe equivalent of **HIGH** mileage.
 
-Let me be clear I am **NOT** a high mileage marathon runner (typically considered >100mpw). I've actually only ever gone over 100 miles per week like once or twice in my life and that was back in college. I've found that my probability of injury sky rockets when I approach 80-90 miles so my "high" mileage sweet spot is around **70 mpw**. In fact for my PR marathon of 2:17 I was right around 70 mpw. I've found it's better to be undertrained and healthy then overtrained and broken. Someday I wouuld like to know the science behind how 70 differs from 100 which differs from 130 miles per week. 
+Let me be clear I am **NOT** a high mileage marathon runner (typically considered >100mpw). I've actually only ever gone over 100 miles per week like once or twice in my life and that was back in college. I've found that my probability of injury sky rockets when I approach 80-90 miles so my "high" mileage sweet spot is around **70 mpw**. In fact for my PR marathon of 2:17 I was right around 70 mpw. I've found it's better to be undertrained and healthy then overtrained and broken. Someday I wouuld like to know the science behind how 70 differs from 100 which differs from 130 miles per week and the fitness gains vs risk of injury graphs for marathon runners. 
 
-**Bottom line** everyone's body is different and you need to play to your strengths. For me that's 70 some mpw, an extreme focus on quality workouts, and a strong mind!
+**Bottom line** everyone's body is different and you need to play to your strengths. For me that's 70 some mpw, an extreme focus on quality workouts, and a building a strong mind!
 
 --------------------------- 
 
