@@ -27,9 +27,7 @@ export default async function handler(req, res) {
       }
     } else if (req.method === 'POST') {
       // Handle webhook PUSH
-      //db.settings({ ignoreUndefinedProperties: true })
       // Write webhook content to db
-      console.log(req.body)
       await db.collection('strava_data')
       .doc('hP8d1Y61Id6uQ5B7DgEW')
       .update({
@@ -56,7 +54,6 @@ export default async function handler(req, res) {
         )
         const activityData = await newestActivity.json()
         const time = new Date(activityData.start_date_local).getTime()
-
         // If aspect_type is create then get weather for that time
         let weather = await getWeather(activityData.start_latlng[0], activityData.start_latlng[1], time/1000)
         // Form a PUT request to update the new activity with weather info
