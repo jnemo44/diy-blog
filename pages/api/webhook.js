@@ -67,7 +67,7 @@ export default async function handler(req, res) {
               Authorization: `Bearer ${token.data().access_token}`,
               'Content-Type': 'application/json',
             },
-            body: JSON.stringify({"description": `🚀 Temp: ${Math.round(weather.data[0].temp)}F Dew Point: ${Math.round(weather.data[0].dew_point)}F Felt Like: ${Math.round(weather.data[0].feels_like)}F\r`}),
+            body: JSON.stringify({"description": `🌡️ Temp: ${Math.round(weather.data[0].temp)}F 💦 Dew Point: ${Math.round(weather.data[0].dew_point)}F ✨ Felt Like: ${Math.round(weather.data[0].feels_like)}F\r`}),
             //🏁 Temp: ${Math.round(weather.data[0].temp)}F Dew Point: ${Math.round(weather.data[0].dew_point)}F Felt Like: ${Math.round(weather.data[0].feels_like)}F
           },
         )
