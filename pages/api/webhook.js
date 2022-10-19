@@ -29,6 +29,7 @@ export default async function handler(req, res) {
       // Handle webhook PUSH
       //db.settings({ ignoreUndefinedProperties: true })
       // Write webhook content to db
+      console.log(req.body)
       await db.collection('strava_data')
       .doc('hP8d1Y61Id6uQ5B7DgEW')
       .update({
@@ -67,7 +68,7 @@ export default async function handler(req, res) {
               Authorization: `Bearer ${token.data().access_token}`,
               'Content-Type': 'application/json',
             },
-            body: JSON.stringify({"description": `🌡️ Temp: ${Math.round(weather.data[0].temp)}F 💦 Dew Point: ${Math.round(weather.data[0].dew_point)}F ✨ Felt Like: ${Math.round(weather.data[0].feels_like)}F\r`}),
+            body: JSON.stringify({"description": `🌡️ Temp: ${Math.round(weather.data[0].temp)}F  💧 Dew Point: ${Math.round(weather.data[0].dew_point)}F  ✨ Felt Like: ${Math.round(weather.data[0].feels_like)}F\r`}),
             //🏁 Temp: ${Math.round(weather.data[0].temp)}F Dew Point: ${Math.round(weather.data[0].dew_point)}F Felt Like: ${Math.round(weather.data[0].feels_like)}F
           },
         )
