@@ -4,9 +4,7 @@ import { getWeather } from "../../lib/util";
 
 export default async function handler(req, res) {
   var currentDate = new Date().toString()
-  console.log("WEBHOOK FIRED")  
   if (req.method === 'GET') {
-      console.log('GET')
       // Process a GET request
       // Parses the query params
       let mode = req.query['hub.mode'];
@@ -18,7 +16,7 @@ export default async function handler(req, res) {
         // Verifies that the mode and token sent are valid
         if (mode === 'subscribe' && token === process.env.WEBHOOK_VERIFY_TOKEN) {
           // Responds with the challenge token from the request
-          console.log('WEBHOOK_VERIFIED');
+          //console.log('WEBHOOK_VERIFIED');
           res.json({ "hub.challenge": challenge });
         } else {
           // Responds with '403 Forbidden' if verify tokens do not match
@@ -53,7 +51,7 @@ export default async function handler(req, res) {
           },
         )
         const activityData = await newestActivity.json()
-        const time = new Date(activityData.start_date_local).getTime()
+        const time = new Date(activityData.start_date).getTime()
         // If aspect_type is create then get weather for that time
         let weather = await getWeather(activityData.start_latlng[0], activityData.start_latlng[1], time/1000)
         // Form a PUT request to update the new activity with weather info
@@ -69,8 +67,6 @@ export default async function handler(req, res) {
             //🏁 Temp: ${Math.round(weather.data[0].temp)}F Dew Point: ${Math.round(weather.data[0].dew_point)}F Felt Like: ${Math.round(weather.data[0].feels_like)}F
           },
         )
-
-        console.log(updateActivity)
       }
       
 
