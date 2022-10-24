@@ -1,11 +1,11 @@
 ---
-title: TBD
+title: What is FUN?
 date: 2022/10/24
 description: Week 9 training summary
 tag: running
 author: Joe Niemiec
 ---
-This week featured two workouts that were just really **FUN!** It's probably weird, but fun for me is pushing the boundaries of my physical limits in a healthy and sustainable way.
+This week featured two workouts that were just really **FUN!** It's probably weird, but fun for me is pushing the boundaries of my physical limits in a healthy and sustainable way. Being attached to legs that have been trained to **RUN**. It's so much **FUN** being healthy and knocking out hard runs!
 
 On Wednesday it was **20 x 400's**. A classic that I don't think I've done since the college days? After 5 reps we were smiling and I can clearly remember my college coach proclaiming with a smile, ***"It's all fun and games for the first 10"***. That was almost true on Wednesday, however I'd say it didn't really feel hard till the 13th rep. My quads and hip flexors were the lim fac towards the end of this workout. I was running faster then planned at **67-69's** each lap and wasn't having much trouble, but those last 5-7 reps felt like a workout as my legs started to age. But I finished strong and made the last 3 reps my fastest to snag a mental win in addition to any physical gains.
 
