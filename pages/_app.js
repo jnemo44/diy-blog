@@ -6,7 +6,7 @@ import useDarkMode from "../components/useDarkMode";
 function MyApp({ Component, pageProps, test }) {
   const [colorTheme, setTheme] = useDarkMode();
   let currentDate = Date.now()
-  let raceDate = new Date("12/4/2022")
+  let raceDate = new Date("1/15/2023")
   return (
     <div className="mx-auto w-10/12 sm:w-8/12 font-Poppins">
       <header className='flex w-full justify-between space-x-4'>
