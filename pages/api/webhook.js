@@ -43,7 +43,7 @@ export default async function handler(req, res) {
       //   })
 
       // If aspect_type is 'create' && run && probably some other things GET strava activity by object ID
-      if (req.body.aspect_type === 'create') {
+      if (req.body.aspect_type === 'create' || req.body.aspect_type === 'update') {
         const token = await db.collection('access_tokens').doc('W50yW2KWMFL2U0XJGbru').get()
         const newestActivity = await fetch(
           `https://www.strava.com/api/v3/activities/${req.body.object_id}`,
@@ -59,7 +59,7 @@ export default async function handler(req, res) {
           // If aspect_type is create then get weather for that time
           const weather = await getWeather(activityData.start_latlng[0], activityData.start_latlng[1], time / 1000)
           //Check to see if weather pulled succesfully
-          if (weather.status >= 200 && weather.status <= 299) {
+          //if (weather.status >= 200 && weather.status <= 299) {
             // Form a PUT request to update the new activity with weather info
             const updateActivity = await fetch(
               `https://www.strava.com/api/v3/activities/${req.body.object_id}`,
@@ -79,11 +79,11 @@ export default async function handler(req, res) {
             else {
               res.status(500).json({message: "Strava activity did not update successfully", status: updateActivity.status, statusText: updateActivity.statusText })
             }
-          }
+          //}
           // Weather did not fetch succesfully
-          else {
-            res.status(500).json({ message: "Failed to fetch weather", status: updateActivity.status, statusText: updateActivity.statusText })
-          }
+          //else {
+          //  res.status(500).json({ message: "Failed to fetch weather", status: updateActivity.status, statusText: updateActivity.statusText })
+          //}
         }
         else {
           res.status(500).json({ message: 'No lat long recieved from Strava! Upload an outdoor activity that includes lat long' });
