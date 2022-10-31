@@ -4,7 +4,7 @@ import Link from 'next/link'
 import useDarkMode from "../components/useDarkMode";
 import { Analytics } from '@vercel/analytics/react';
 
-function MyApp({ Component, pageProps, test }) {
+function MyApp({ Component, pageProps}) {
   const [colorTheme, setTheme] = useDarkMode();
   let currentDate = Date.now()
   let raceDate = new Date("1/15/2023")
