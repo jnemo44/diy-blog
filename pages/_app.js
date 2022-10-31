@@ -2,6 +2,7 @@ import '../styles/globals.css'
 import { SunIcon, MoonIcon } from '@heroicons/react/24/solid'
 import Link from 'next/link'
 import useDarkMode from "../components/useDarkMode";
+import { Analytics } from '@vercel/analytics/react';
 
 function MyApp({ Component, pageProps, test }) {
   const [colorTheme, setTheme] = useDarkMode();
@@ -27,7 +28,10 @@ function MyApp({ Component, pageProps, test }) {
           </div>
         </nav>
       </header>
-      <Component {...pageProps} />
+      <>
+        <Component {...pageProps} />
+        <Analytics />
+      </>
     </div>
   )
 }

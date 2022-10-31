@@ -24,6 +24,7 @@ export default async function handler(req, res) {
     }
   } else if (req.method === 'POST') {
     if (req.body.subscription_id !== 227223) {
+      console.log("Incorrect API Key!")
       return (res.status(401).json({ message: "Incorrect API Key! You cannot access this item." }))
     }
     // Correct API KEY continue
@@ -77,6 +78,7 @@ export default async function handler(req, res) {
             }
             // Strava activity did not update succesfully
             else {
+              console.log("Strava activity did not update successfully")
               res.status(500).json({message: "Strava activity did not update successfully", status: updateActivity.status, statusText: updateActivity.statusText })
             }
           //}
