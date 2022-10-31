@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import db from '../lib/db'
@@ -11,6 +10,7 @@ export default function Home({ posts, stravaStats }) {
   const earth_miles_to_go = (24901-run_total_miles).toLocaleString('en-US')
   const run_total_time = Math.round(stravaStats.all_run_totals.moving_time/3600)
 
+  // Organize posts by most recent
   posts.sort((a, b) => {
     return (new Date(b.date) - new Date(a.date))
   })

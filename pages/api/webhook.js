@@ -88,15 +88,18 @@ export default async function handler(req, res) {
           //}
         }
         else {
+          console.log("No Lat Long from Strava")
           res.status(500).json({ message: 'No lat long recieved from Strava! Upload an outdoor activity that includes lat long' });
         }
       }
       else {
+          console.log("Not a 'create' activity.")
           res.status(200).json({message: "Not a 'create' activity."})
       }
     }
   }
   else {
+    console.log("Not a POST request")
     // Handle any other HTTP method
     db.collection('error_data')
       .doc('dVO9Otfq4yBAdR4dkHBU')
