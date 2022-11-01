@@ -30,7 +30,7 @@ Over the past few weeks the key driver for this decision ultimatley aligns with 
 For those not familiar with the running world here are the luxuries provided to an almost professional runner...
 
 - Complimentary entry to the race 
-- A small pre-race stretching/warm-up area **with port-a-cans!!!!**💩💪 
+- A small pre-race stretching/warm-up area **with port-a-cans** 💩💪 
 - A priority starting location just behind the elites and ahead of the open field. 
 
 In all seriousness though having access to bathrooms near the start line is a top luxury. It's like a peasant boy taking ownership of a golden chalice 🏆 during the middle ages. Truly life changing. If you know you know.
