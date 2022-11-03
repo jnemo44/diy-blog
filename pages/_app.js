@@ -1,11 +1,15 @@
 import '../styles/globals.css'
+import { useState } from 'react'
 import { SunIcon, MoonIcon } from '@heroicons/react/24/solid'
 import Link from 'next/link'
 import useDarkMode from "../components/useDarkMode";
 import { Analytics } from '@vercel/analytics/react';
+import { createBrowserSupabaseClient } from '@supabase/auth-helpers-nextjs'
+import { SessionContextProvider } from '@supabase/auth-helpers-react'
 
-function MyApp({ Component, pageProps}) {
+function MyApp({ Component, pageProps }) {
   const [colorTheme, setTheme] = useDarkMode();
+  const [supabaseClient] = useState(() => createBrowserSupabaseClient())
   let currentDate = Date.now()
   let raceDate = new Date("1/15/2023")
   return (
@@ -29,7 +33,12 @@ function MyApp({ Component, pageProps}) {
         </nav>
       </header>
       <>
-        <Component {...pageProps} />
+        <SessionContextProvider
+          supabaseClient={supabaseClient}
+          initialSession={pageProps.initialSession}
+        >
+          <Component {...pageProps} />
+        </SessionContextProvider>
         <Analytics />
       </>
     </div>
