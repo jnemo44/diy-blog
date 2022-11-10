@@ -7,6 +7,8 @@ author: Joe Niemiec
 ---
 This weekend included a dance between wanting to get my runs in while also being present on a quick trip up to Michigan. Two outta three days I snuck my runs in, but the long run scheduled for Sunday just didn't happen. Instead I traded it for an hour with my 92 year old grandfather and a Detroit Lions game with my little brother! **No regrets!** I will be the best runner I can be while also being present when **life** is happening around me.
 
+Highlight of the week was being able to run with two different brothers in the same week! Matt got me through an easy run and the birdman coached me through 4x2 mile repeats like a **pro!** He cleared corners, help me cross roads, and was present when I started hurting. So special to be able to share the sport I love with the people I love.
+
 --------------------------- 
 
 ## **The Work**
