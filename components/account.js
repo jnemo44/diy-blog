@@ -28,7 +28,7 @@ export default function Account({ session }) {
 
       if (data) {
         setUsername(data.username)
-        setWebsite(data.units)
+        setUnits(data.units)
       }
     } catch (error) {
       alert('Error loading user data!')
@@ -61,10 +61,19 @@ export default function Account({ session }) {
   }
 
   return (
-    <div className="flex-col space-y-4 justify-center border-1">
+    <div>
       <div>
-        <label htmlFor="email">Email</label>
-        <input id="email" type="text" value={session.user.email} disabled />
+        <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+          Email
+        </label>
+        <div className="mt-1">
+          <input
+            className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" 
+            id="email" 
+            type="text" 
+            value={session.user.email} 
+            disabled />
+        </div>    
       </div>
       <div>
         <label htmlFor="username">Username</label>
