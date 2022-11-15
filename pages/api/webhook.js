@@ -64,6 +64,7 @@ export default async function handler(req, res) {
           // If aspect_type is create then get weather for that time
           const weather = await getWeather(activityData.start_latlng[0], activityData.start_latlng[1], time / 1000)         
           const weatherDetail = weatherDescription((weather.data[0].weather[0].description))
+          console.log(weatherDetail)
           //Check to see if weather pulled succesfully
           //if (weather.status >= 200 && weather.status <= 299) {
             // Form a PUT request to update the new activity with weather info
@@ -75,7 +76,7 @@ export default async function handler(req, res) {
                   Authorization: `Bearer ${token.data().access_token}`,
                   'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ "description": `🌡️ Temp: ${Math.round(weather.data[0].temp)}F  💧 Dew Point: ${Math.round(weather.data[0].dew_point)}F  ✨ Felt Like: ${Math.round(weather.data[0].feels_like)}F\r💨 Wind Speed: ${Math.round(weather.data[0].wind_speed)}mph out of the ${windDirection(Math.round(weather.data[0].wind_deg))} with gusts up to ${Math.round(weather.data[0].wind_gust)}mph\r📝 ${weatherDetail}`}),
+                body: JSON.stringify({ "description": `🌡️ Temp: ${Math.round(weather.data[0].temp)}F  💧 Dew Point: ${Math.round(weather.data[0].dew_point)}F  ✨ Felt Like: ${Math.round(weather.data[0].feels_like)}F\r💨 Winds ${Math.round(weather.data[0].wind_speed)}mph out of the ${windDirection(Math.round(weather.data[0].wind_deg))} gusting to ${Math.round(weather.data[0].wind_gust)}mph`}),
               },
             )
             if (updateActivity.status >= 200 && updateActivity.status <= 299) {
