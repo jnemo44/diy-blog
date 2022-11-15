@@ -88,10 +88,6 @@ export async function getStaticProps() {
   return {
     props: {
       stravaStats,
-      //weather: {
-      //  ...weatherInfo,
-      //  dewPoint:dewPoint,
-      //},
       posts: allPosts.map(({ data, content, slug}) => ({
         ...data,
         date: data.date,
@@ -99,7 +95,7 @@ export async function getStaticProps() {
         slug,
       })),
     },
-    revalidate: 3600,
+    revalidate: 7200,
   };
 }
 
