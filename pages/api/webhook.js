@@ -58,7 +58,7 @@ export default async function handler(req, res) {
         const activityData = await newestActivity.json()
         const response = await db.collection('activity_data')
         .doc('43SgfyxrSXVdo4sXFIjE')
-        .set(activityData, { merge: true })
+        .set((activityData.start_latlng, activityData.description), { merge: true })
         const time = new Date(activityData.start_date).getTime()
         if (typeof activityData.start_latlng !== 'undefined') {
           // If aspect_type is create then get weather for that time
