@@ -1,7 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import db from "../../lib/db";
-import { getWeather } from "../../lib/util";
-import {windDirection, weatherDescription} from "../../lib/weatherUtils";
+import { windDirection, weatherDescription, getWeather } from "../../lib/weatherUtils";
+import { fetchStravaActivity } from "../../lib/stravaUtils";
 
 export default async function handler(req, res) {
   var currentDate = new Date().toString()
@@ -30,72 +30,45 @@ export default async function handler(req, res) {
     }
     // Correct API KEY continue
     else {
-      // Write webhook content to db
-      // await db.collection('strava_data')
-      //   .doc('hP8d1Y61Id6uQ5B7DgEW')
-      //   .update({
-      //     object_id: req.body.object_id,
-      //     object_type: req.body.object_type,
-      //     aspect_type: req.body.aspect_type,
-      //     event_time: req.body.event_time,
-      //     owner_id: req.body.owner_id,
-      //     subscription_id: req.body.subscription_id,
-      //     update_date: currentDate,
-      //     updates: req.body.updates,
-      //   })
-
       // If aspect_type is 'create' && run && probably some other things GET strava activity by object ID
       if (req.body.aspect_type === 'create' || req.body.aspect_type === 'update') {
         const token = await db.collection('access_tokens').doc('W50yW2KWMFL2U0XJGbru').get()
-        const newestActivity = await fetch(
-          `https://www.strava.com/api/v3/activities/${req.body.object_id}`,
-          {
-            headers: {
-              Authorization: `Bearer ${token.data().access_token}`,
-            },
-          },
-        )
-        const activityData = await newestActivity.json()
-        const logData = {
-          coord: activityData.start_latlng,
-          description: activityData.description
-        }
-        const response = await db.collection('activity_data')
-        .doc('43SgfyxrSXVdo4sXFIjE')
-        .set(logData , { merge: true })
+        const activityData = await fetchStravaActivity(req.body.object_id, token.data().access_token)
+        //const logData = {
+        //  coord: activityData.start_latlng,
+        //  description: activityData.description
+        //}
+        // const response = await db.collection('activity_data')
+        // .doc('43SgfyxrSXVdo4sXFIjE')
+        // .set(logData, { merge: true })
         const time = new Date(activityData.start_date).getTime()
         if (typeof activityData.start_latlng !== 'undefined') {
           // If aspect_type is create then get weather for that time
-          const weather = await getWeather(activityData.start_latlng[0], activityData.start_latlng[1], time / 1000)         
+          const weather = await getWeather(activityData.start_latlng[0], activityData.start_latlng[1], time / 1000)
           const weatherDetail = weatherDescription((weather.data[0].weather[0].description))
           console.log(weatherDetail)
+          console.log(weather.data[0])
           //Check to see if weather pulled succesfully
-          //if (weather.status >= 200 && weather.status <= 299) {
-            // Form a PUT request to update the new activity with weather info
-            const updateActivity = await fetch(
-              `https://www.strava.com/api/v3/activities/${req.body.object_id}`,
-              {
-                method: 'PUT',
-                headers: {
-                  Authorization: `Bearer ${token.data().access_token}`,
-                  'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ "description": `🌡️ Temp: ${Math.round(weather.data[0].temp)}F  💧 Dew Point: ${Math.round(weather.data[0].dew_point)}F  ✨ Felt Like: ${Math.round(weather.data[0].feels_like)}F\r💨 Winds ${Math.round(weather.data[0].wind_speed)}mph out of the ${windDirection(Math.round(weather.data[0].wind_deg))} gusting to ${Math.round(weather.data[0].wind_gust)}mph`}),
+          // Form a PUT request to update the new activity with weather info
+          const updateActivity = await fetch(
+            `https://www.strava.com/api/v3/activities/${req.body.object_id}`,
+            {
+              method: 'PUT',
+              headers: {
+                Authorization: `Bearer ${token.data().access_token}`,
+                'Content-Type': 'application/json',
               },
-            )
-            if (updateActivity.status >= 200 && updateActivity.status <= 299) {
-              res.status(200).json({ message: 'Success!' });
-            }
-            // Strava activity did not update succesfully
-            else {
-              console.log("Strava activity did not update successfully")
-              res.status(500).json({message: "Strava activity did not update successfully", status: updateActivity.status, statusText: updateActivity.statusText })
-            }
-          //}
-          // Weather did not fetch succesfully
-          //else {
-          //  res.status(500).json({ message: "Failed to fetch weather", status: updateActivity.status, statusText: updateActivity.statusText })
-          //}
+              body: JSON.stringify({ "description": `🌡️ Temp: ${Math.round(weather.data[0].temp)}F  💧 Dew Point: ${Math.round(weather.data[0].dew_point)}F  ✨ Felt Like: ${Math.round(weather.data[0].feels_like)}F\r💨 Winds out of the ${windDirection(Math.round(weather.data[0].wind_deg))} ${Math.round(weather.data[0].wind_speed)}mph gust ${Math.round(weather.data[0].wind_gust)}mph` }),
+            },
+          )
+          if (updateActivity.status >= 200 && updateActivity.status <= 299) {
+            res.status(200).json({ message: 'Success!' });
+          }
+          // Strava activity did not update succesfully
+          else {
+            console.log("Strava activity did not update successfully")
+            res.status(500).json({ message: "Strava activity did not update successfully", status: updateActivity.status, statusText: updateActivity.statusText })
+          }
         }
         else {
           console.log("No Lat Long from Strava")
@@ -103,8 +76,8 @@ export default async function handler(req, res) {
         }
       }
       else {
-          console.log("Not a 'create' activity.")
-          res.status(200).json({message: "Not a 'create' activity."})
+        console.log("Not a 'create' activity.")
+        res.status(200).json({ message: "Not a 'create' activity." })
       }
     }
   }
