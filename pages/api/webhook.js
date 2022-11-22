@@ -34,13 +34,7 @@ export default async function handler(req, res) {
       if (req.body.aspect_type === 'create' || req.body.aspect_type === 'update') {
         const token = await db.collection('access_tokens').doc('W50yW2KWMFL2U0XJGbru').get()
         const activityData = await fetchStravaActivity(req.body.object_id, token.data().access_token)
-        //const logData = {
-        //  coord: activityData.start_latlng,
-        //  description: activityData.description
-        //}
-        // const response = await db.collection('activity_data')
-        // .doc('43SgfyxrSXVdo4sXFIjE')
-        // .set(logData, { merge: true })
+        // Use start time to pull weather data
         const time = new Date(activityData.start_date).getTime()
         if (typeof activityData.start_latlng !== 'undefined') {
           // If aspect_type is create then get weather for that time
@@ -48,6 +42,12 @@ export default async function handler(req, res) {
           const weatherDetail = weatherDescription((weather.data[0].weather[0].description))
           console.log(weatherDetail)
           console.log(weather.data[0])
+          if ('wind_gust' in weather.data[0]){
+            const gustText = 'gusting to ${Math.round(weather.data[0].wind_gust)}mph'
+          }
+          else {
+            const gustText = ''
+          }
           //Check to see if weather pulled succesfully
           // Form a PUT request to update the new activity with weather info
           const updateActivity = await fetch(
@@ -58,7 +58,7 @@ export default async function handler(req, res) {
                 Authorization: `Bearer ${token.data().access_token}`,
                 'Content-Type': 'application/json',
               },
-              body: JSON.stringify({ "description": `🌡️ Temp: ${Math.round(weather.data[0].temp)}F  💧 Dew Point: ${Math.round(weather.data[0].dew_point)}F  ✨ Felt Like: ${Math.round(weather.data[0].feels_like)}F\r💨 Winds out of the ${windDirection(Math.round(weather.data[0].wind_deg))} ${Math.round(weather.data[0].wind_speed)}mph gust ${Math.round(weather.data[0].wind_gust)}mph` }),
+              body: JSON.stringify({ "description": `🌡️ Temp: ${Math.round(weather.data[0].temp)}F  💧 Dew Point: ${Math.round(weather.data[0].dew_point)}F  ✨ Felt Like: ${Math.round(weather.data[0].feels_like)}F\r💨 Winds out of the ${windDirection(Math.round(weather.data[0].wind_deg))} ${Math.round(weather.data[0].wind_speed)}mph ${gustText}` }),
             },
           )
           if (updateActivity.status >= 200 && updateActivity.status <= 299) {
