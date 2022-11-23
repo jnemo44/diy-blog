@@ -9,13 +9,9 @@ Okay so it's week 12 and I'm scraping the bottom of the barrel for content. And 
 
 **Next intense workout try listening to piano music!** No words. No covers. Just a tickling of the ivory.
 
-Ok so typically I would default to some hard rock or EDM, but during some recent workouts I've had piano songs come on and it's wierd how the calm tone of the music actually helps me stay relaxed despite the phyiscal pain of the workout. Running (any hard work really) is **SO** mental and staying calm and relaxed despite pain is at the crux of racing. During a race (and only a race) you have to find ways to disconect what your body is **feeling** from what your brain knows it needs to do (run faster then you ever have). Pain is your bodies way of communicating, "hey dude **STOP!!!**". Enter piano music which is essentaily like a
+Ok so typically I would default to some hard rock or EDM when working out, but during some recent workouts I've had piano songs come on and it's wierd how the calm tone of the music actually helps me stay relaxed despite the phyiscal pain of the workout. Running (any hard work really) is **SO** mental and staying calm and relaxed despite pain is at the crux of racing. During a race you have to find ways to disconect from what your body is **feeling**. The feeling of pain is your bodies way of communicating **STOP!!** And only during a race are you allowed to ignore this primal feedback loop. But how do I get better at ignoring pain? Enter piano music. It's essentially like a wet blanket on the fire of pain I start to feel during workouts.   
 
-
-while normally reserved for hotel lobbies, elevators, and my living room during nap time I believe I have found a new market for 
-
-
-predict piano music is going to find it's way back into ears of gym rats and runners alike.
+While normally reserved for hotel lobbies, elevators, and my living room during nap time piano music has found it's way onto my workout playlist and it's there to stay! 
 
 --------------------------- 
 

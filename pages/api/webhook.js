@@ -32,18 +32,16 @@ export default async function handler(req, res) {
     else {
       // If aspect_type is 'create' && run && probably some other things GET strava activity by object ID
       if (req.body.aspect_type === 'create' || req.body.aspect_type === 'update') {
-        const token = await db.collection('access_tokens').doc('W50yW2KWMFL2U0XJGbru').get()
-        const activityData = await fetchStravaActivity(req.body.object_id, token.data().access_token)
+        const token = await updateStravaTokens();  
+        //const token = await db.collection('access_tokens').doc('W50yW2KWMFL2U0XJGbru').get()...token.data().access_token
+        const activityData = await fetchStravaActivity(req.body.object_id, token)
         // Use start time to pull weather data
         const time = new Date(activityData.start_date).getTime()
         if (typeof activityData.start_latlng !== 'undefined') {
           // If aspect_type is create then get weather for that time
           const weather = await getWeather(activityData.start_latlng[0], activityData.start_latlng[1], time / 1000)
-          const weatherDetail = convertWeatherDescription(weather.data[0].weather[0].description)
+          //const weatherDetail = convertWeatherDescription(weather.data[0].weather[0].description)
           const weatherIcon = getWeatherIcon(weather.data[0].weather[0].id)
-          console.log(weatherIcon)
-          console.log(weatherDetail)
-          console.log(weather.data[0])
           //Check to see if weather pulled succesfully
           // Form a PUT request to update the new activity with weather info
           const updateActivity = await fetch(
@@ -51,7 +49,7 @@ export default async function handler(req, res) {
             {
               method: 'PUT',
               headers: {
-                Authorization: `Bearer ${token.data().access_token}`,
+                Authorization: `Bearer ${token}`,
                 'Content-Type': 'application/json',
               },
               body: JSON.stringify({ "description": `${weatherIcon} ${weather.data[0].weather[0].main} 💨 Winds from the ${convertWindDirection(Math.round(weather.data[0].wind_deg))} ${Math.round(weather.data[0].wind_speed)}mph ${'wind_gust' in weather.data[0] ? `gusting ${Math.round(weather.data[0].wind_gust)}mph` : ''}\r🌡️ Temp: ${Math.round(weather.data[0].temp)}F  💧 Dew Point: ${Math.round(weather.data[0].dew_point)}F  ✨ Felt Like: ${Math.round(weather.data[0].feels_like)}F` }),
