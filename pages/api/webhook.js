@@ -54,7 +54,7 @@ export default async function handler(req, res) {
                 Authorization: `Bearer ${token.data().access_token}`,
                 'Content-Type': 'application/json',
               },
-              body: JSON.stringify({ "description": `${weatherIcon} ${weather.data[0].weather[0].main} 💨 Winds out of the ${convertWindDirection(Math.round(weather.data[0].wind_deg))} ${Math.round(weather.data[0].wind_speed)}mph ${'wind_gust' in weather.data[0] ? `gusting to ${Math.round(weather.data[0].wind_gust)}mph` : ''}\r🌡️ Temp: ${Math.round(weather.data[0].temp)}F  💧 Dew Point: ${Math.round(weather.data[0].dew_point)}F  ✨ Felt Like: ${Math.round(weather.data[0].feels_like)}F` }),
+              body: JSON.stringify({ "description": `${weatherIcon} ${weather.data[0].weather[0].main} 💨 Winds from the ${convertWindDirection(Math.round(weather.data[0].wind_deg))} ${Math.round(weather.data[0].wind_speed)}mph ${'wind_gust' in weather.data[0] ? `gusting ${Math.round(weather.data[0].wind_gust)}mph` : ''}\r🌡️ Temp: ${Math.round(weather.data[0].temp)}F  💧 Dew Point: ${Math.round(weather.data[0].dew_point)}F  ✨ Felt Like: ${Math.round(weather.data[0].feels_like)}F` }),
             },
           )
           if (updateActivity.status >= 200 && updateActivity.status <= 299) {
