@@ -1,7 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import db from "../../lib/db";
 import { convertWindDirection, convertWeatherDescription, getWeather, getWeatherIcon } from "../../lib/weatherUtils";
-import { fetchStravaActivity } from "../../lib/stravaUtils";
+import { fetchStravaActivity, updateStravaTokens } from "../../lib/stravaUtils";
 
 export default async function handler(req, res) {
   var currentDate = new Date().toString()
