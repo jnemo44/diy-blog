@@ -7,9 +7,10 @@ author: Joe Niemiec
 ---
 Yes it was Thanksgiving week and yes I nailed the main objective of the week which was to win a pie. No coconut cream this year, but the chocolate pie was fantastic!
 
-I raced the 30A 10k on Thursday and finished first with a one second PR of  [30:14!](https://onlineraceresults.com/race/view_race.php?race_id=76009#racetop) 
+I raced the 30A 10k on Thursday and finished first with a one second PR of
+<a href="https://onlineraceresults.com/race/view_race.php?race_id=76009#racetop" target="_blank">30:14!</a>
 
-Although I paced to go **sub 30** I used the race mile markers for splits (instead of GPS) due to it being a certified course. However, it appears markers 5 and 6 were off which really threw me off during the race (see splits table). Split time is what I saw on my watch during the race and GPS pace was closer to the truth. At the half I was sub 15 by a few seconds and I started getting excited. I kept going, but at mile 5 I saw a 5:14 split which really pissed me off because I felt like I'd kept the hammer down. This led to a slower mile 6, because in my mind sub 30 was gone. In reality I was only 4 seconds off pace which would have been a manageable adjustment to make compared to the 24 seconds after a 5:14. Oh well. Lesson learned for next time for this race specifically is to just use GPS. It's in the open with no tall buildings and only one turn so GPS is accurate enough to pace off of.
+Although I paced to go **sub 30** I used the race mile markers for splits (instead of GPS) due to it being a certified course. However, it appears markers 5 and 6 were off which really threw me off during the race (see splits table). Split time is what I saw on my watch during the race and GPS pace was closer to the truth. At the half I was sub 15 by a few seconds and I started getting excited. I kept going, but at mile 5 I saw a 5:14 split which really pissed me off because I felt like I'd kept the hammer down. This led to a slower mile 6 as I tried to rally mentally. However, in my mind sub 30 was gone so I was just trying to finish honest to maximze the workout. In reality I was only 4 seconds off pace at mile 5 which, had I known, would have been a super manageable adjustment to make compared to the 24 seconds I thought I'd have to make. **Oh well!** Lesson learned for next time for this race specifically is to just use GPS. It's in the open with no tall buildings and only one turn so GPS is accurate enough to pace off of.
 
 ### Race Splits
 <div className="overflow-x-auto">
