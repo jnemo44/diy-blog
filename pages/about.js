@@ -19,7 +19,7 @@ export default function About() {
           <p>{"Hi! I'm Joe."}</p>
 
           <p>
-            {"I'm currently a full time flight test engineer 🛩️ that's still trying to decide what I want to be when I grow up 🧙. I love running and enjoy building things online so this is my space to combine 🏃‍♂️ ➕ 💻."}
+            {"I'm a full time flight test engineer 🛩️ that's still trying to decide what I want to be when I grow up 🧙. I love running and enjoy building things online so this is my space to combine 🏃‍♂️ ➕ 💻."}
           </p>
           <p> 
           {"Follow along as I test web development ideas and write about the glamorous life of a semi-pro runner!"}   
