@@ -14,7 +14,7 @@ Honestly, I am not going to claim I know why, but what I will pass along is what
 - Sleeping 8-10 hours
 - Bone broth in most meals (all Jas's idea)
 - Drinking raw milk daily
-- Collogen in coffee every other day
+- Collagen in coffee every other day
 - Zero booze
 - Using Tailwind post longrun/workout
 - Bloodwork last month (gives me confidence my fatique isn't low iron)
