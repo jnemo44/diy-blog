@@ -17,7 +17,7 @@ Honestly, I am not going to claim I know why, but what I will pass along is what
 - Collagen in coffee every other day
 - Zero booze
 - Using Tailwind post longrun/workout
-- Bloodwork last month (gives me confidence my fatique isn't low iron)
+- Bloodwork last month (gives me confidence my fatigue isn't low iron)
 - 15 minutes of rolling and stretching 3x per week
 - Workouts in fast but cushy shoes
 - Just started fueling during long runs

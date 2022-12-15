@@ -49,4 +49,4 @@ Highlight of the week was being able to run with two different brothers in the s
 </div>
 
 ## **Health**
-I think I have a slightly tight left achillis, but otherwise I'm still healthy. The 4x2 mile repeats in Michigan had some nice hills with them so that's probably the cause. Focusing on warming up before my runs the next few days.
+I think I have a slightly tight left achilles, but otherwise I'm still healthy. The 4x2 mile repeats in Michigan had some nice hills with them so that's probably the cause. Focusing on warming up before my runs the next few days.

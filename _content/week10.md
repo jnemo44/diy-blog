@@ -13,7 +13,7 @@ author: Joe Niemiec
 - Comped entry
   
 #### **CIM Cons**
-- 8-10 hour travel times out to Sacremento that would mess with my sleep and are $$$
+- 8-10 hour travel times out to Sacramento that would mess with my sleep and are $$$
 - Unable to have any family travel out
 - December is a only a month away!!
   
@@ -25,7 +25,7 @@ author: Joe Niemiec
 #### **Houston Cons**
 - A 9 hour drive split over two days
 
-Over the past few weeks the key driver for this decision ultimatley aligns with my **WHYs** for my current buildup. I will run fast and my family will be included. **Houston** checks both boxes!
+Over the past few weeks the key driver for this decision ultimately aligns with my **WHYs** for my current buildup. I will run fast and my family will be included. **Houston** checks both boxes!
 
 For those not familiar with the running world here are the luxuries provided to an almost professional runner...
 
@@ -69,5 +69,5 @@ In all seriousness though having access to bathrooms near the start line is a to
 </div>
 
 ## **Health**
-Most of this week was done on a treadmill in the BAHAMAS. It was awesome. However, upon arriving home my wife and 2 of my kids were sick. One was up every hour through the night to throw up. So yea didn't sleep Friday which meant an off day Saturday and pushing the long run to week 11. So a lower volume week, but I havn't gotten sick yet and I was able to execute my long run workout on Monday! Body is healthy and strong!
+Most of this week was done on a treadmill in the BAHAMAS. It was awesome. However, upon arriving home my wife and 2 of my kids were sick. One was up every hour through the night to throw up. So yea didn't sleep Friday which meant an off day Saturday and pushing the long run to week 11. So a lower volume week, but I haven't gotten sick yet and I was able to execute my long run workout on Monday! Body is healthy and strong!
 
