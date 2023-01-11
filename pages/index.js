@@ -38,6 +38,8 @@ export default function Home({ posts, stravaStats }) {
         </div>
       </div>
 
+      <a href="https://rtrt.me/ulink/HOUA/HOU-2023/tracker/R5ACUDJW/focus" className="flex font-bold justify-center my-10 sm:hidden place-self-center whitespace-nowrap" target="_blank" rel="noopener noreferrer">Click me to track my 2023 Houston Marathon splits!</a>
+
       <div className="text-2xl font-bold my-2">Training Blog</div>
 
       <div className="space-y-4">
