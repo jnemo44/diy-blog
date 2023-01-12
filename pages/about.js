@@ -21,8 +21,14 @@ export default function About() {
           <p>
             {"I'm a full time flight test engineer 🛩️ that's still trying to decide what I want to be when I grow up 🧙. I love running and enjoy building things online so this is my space to combine 🏃‍♂️ ➕ 💻."}
           </p>
-          <p> 
-          {"Follow along as I test web development ideas and write about the glamorous life of a semi-pro runner!"}   
+          <p>
+            {/* {"Follow along as I test web development ideas and write about the glamorous life of a semi-pro runner!"} */}
+            {"I'm currently training to qualify for the US Olympic Marathon Trials (sub 2:18) in 2024. Along the way I am representing an awesome organization called Operation Underground Railroad in their fight to end slavery! "}
+            {"If you'd like to support me in this goal checkout the link below!"}
+          </p>
+
+          <p className="flex justify-center">
+          <div className="font-bold text-xl"><a href="https://www.gofundme.com/f/elite-racing-benefitting-our?utm_campaign=p_cf+share-flow-1&utm_medium=copy_link&utm_source=customer"> Join the Fight!</a></div>
           </p>
 
           <p>
@@ -30,10 +36,8 @@ export default function About() {
             {"does not include anything from my time as a runner in highschool or college where I was a division ✌ XC and track runner. And I like it that way. I want to show people that awesome fitness can carry on long after school, a job, marriage, and possibly even 4 kids!"}
           </p>
 
-          <div className="font-bold text-xl">The Linkages 🔗</div>
-
+          <div className="font-bold text-xl">Follow Along 🔗</div>
           <ul>
-            <li>Fighting to end slavery. <a href="https://www.gofundme.com/f/elite-racing-benefitting-our?utm_campaign=p_cf+share-flow-1&utm_medium=copy_link&utm_source=customer"> Join the Fight!</a></li>
             <li>Twitter <a href="https://twitter.com/joe_niemiec">@joe_niemiec</a></li>
             <li>GitHub <a href="https://github.com/jnemo44">@jnemo44</a></li>
             <li>Instagram <a href="https://instagram.com/joe.niemiec">@joe.niemiec</a></li>
