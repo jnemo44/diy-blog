@@ -30,3 +30,10 @@ THe ritualistic pre-race 400's. 12 reps around 72ish depending on if there was a
 
 ## Thursday
 Another low key day. 45 minute easy run and thankfully only some dull residual soreness from whatever that nerve thing was yesterday. I know I'm so scientific. But what am I supposed to do? No time to get it looked at and it doesn't hurt when running and it's got about 2.5 days to fix itself. It'll be fine. One of the more exciting things today was how excited my kids are to travel! Probably not for the race but they love hotels and race snacks. Soaking up this age they still think I'm a superhero.
+
+## Friday
+And the trip begins! Started the day with a 30 minute run with Jas before blasting through Florida, Alabama, and Mississippi to end up in Louisiana for the night. Throughout the day I’ve been bombarded with encouraging words. I’m so honored and humbled to have so many people in my corner! I think the message I got from my coach today best sums up the sentiment…
+
+(*I believe in you. You must believe in yourself. We started this journey just about a year ago together and I know in my heart you have enough in you to accomplish this goal. Today…tomorrow it matters not you will be on the line in 2024. But for this race your family gets to see you in absolute vulnerability and when you cross the line they love you just as fiercely as they did before the race started!*)*
+
+Yea so I’m not emotional or anything….thanks Coach James! So excited to give this distance another shot after a three year hiatus.
