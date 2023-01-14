@@ -17,8 +17,6 @@ Lastly, for this race I'll be representing Operation Underground Railroad, an or
 <div className="font-bold text-xl"><a href="https://www.gofundme.com/f/elite-racing-benefitting-our?utm_campaign=p_cf+share-flow-1&utm_medium=copy_link&utm_source=customer"> Join the Fight!</a></div>
 </p>
 
-# 2023 Houston Marathon Race Week
-
 ## Monday
 A normal day. So normal in fact that as I write this I have a hard time believing I'm supposed to run a marathon this weekend! Did an easy 55 minute run today and my legs actually felt like they wanted to run for the first time in probably a week and a half. My focus for this week is just stretching, rest, and carbs. As of last week I'm also caffeine free till race day just to help keep from getting excited for no reason. The only time I did feel some excitement today was after getting a text from my coach with a weather update and some race week reminders. It's getting real and his excitement got me excited. Other then that I prefer to keep my excitement and emotion in a bottle on race week. Just keep storing it up. No **ADRENALINE** allowed!! Until race day. Wrapping up the day with stretching and 20 minutes in compression boots. 
 
