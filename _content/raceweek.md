@@ -7,7 +7,9 @@ author: Joe Niemiec
 ---
 Wanted to capture a marathon race week one day at a time. No filter. Probably super boring, but always enjoy the emotion and mental aspect of race prep and I wanted to share what I'm thinking. Oh and if you want to track me on Sunday checkout the link below!
 
-<div align="center"><a href="https://rtrt.me/ulink/HOUA/HOU-2023/tracker/R5ACUDJW/focus" target="_blank" rel="noopener noreferrer">Use this link to track me on 1/15/23 @ 7:01AM CST!</a></div>
+<p className="flex justify-center">
+<div className="font-bold text-xl"><a href="https://rtrt.me/ulink/HOUA/HOU-2023/tracker/R5ACUDJW/focus" target="_blank" rel="noopener noreferrer">Use this link to track me on 1/15/23 @ 7:01AM CST!</a></div>
+</p>
 
 Lastly, for this race I'll be representing Operation Underground Railroad, an organization working to end modern day slavery. If my running has ever inspired you would you consider joining the fight?
 
