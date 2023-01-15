@@ -31,7 +31,7 @@ export default async function handler(req, res) {
     // Correct API KEY continue
     else {
       // If aspect_type is 'create' && run && probably some other things GET strava activity by object ID
-      if (req.body.aspect_type === 'create' || req.body.aspect_type === 'update') {
+      if (req.body.aspect_type === 'create') {
         const token = await updateStravaTokens();  
         //const token = await db.collection('access_tokens').doc('W50yW2KWMFL2U0XJGbru').get()...token.data().access_token
         const activityData = await fetchStravaActivity(req.body.object_id, token)
