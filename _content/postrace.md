@@ -5,6 +5,12 @@ description: A top 20 finishers perspective
 tag: running
 author: Joe Niemiec
 ---
+For this race I represented Operation Underground Railroad, which is an organization working to end modern day slavery. If my running has ever inspired you would you consider joining the fight?
+
+<p className="flex justify-center">
+<div className="font-bold text-xl"><a href="https://www.gofundme.com/f/elite-racing-benefitting-our?utm_campaign=p_cf+share-flow-1&utm_medium=copy_link&utm_source=customer"> Join the Fight!</a></div>
+</p>
+
 ## The Good
 - Fueling went well. Consumed 5 gels during the race plus on course fluid (50C). One at the start (600C). Breakfast of two oatmeals (400C), banana (100C), Maurten Fluid (160C) and coffee. So 1310 Calories consumed before the end of the race. I don't think fuel was an issue for this race.
 - Mentally strong. Was able to push through several rough patches before I bonked.
