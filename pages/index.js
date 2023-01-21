@@ -38,7 +38,7 @@ export default function Home({ posts, stravaStats }) {
         </div>
       </div>
 
-      <a href="https://rtrt.me/ulink/HOUA/HOU-2023/tracker/R5ACUDJW/focus" className="flex border text-sm shadow-md rounded-lg font-bold justify-center my-10 sm:hidden place-self-center" target="_blank" rel="noopener noreferrer">Click to track my Houston Marathon splits!</a>
+      {/* <a href="https://rtrt.me/ulink/HOUA/HOU-2023/tracker/R5ACUDJW/focus" className="flex border text-sm shadow-md rounded-lg font-bold justify-center my-10 sm:hidden place-self-center" target="_blank" rel="noopener noreferrer">Click to track my Houston Marathon splits!</a> */}
 
       <div className="text-2xl font-bold my-2">Training Blog</div>
 
