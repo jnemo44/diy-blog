@@ -24,7 +24,8 @@ export default async function handler(req, res) {
       }
     }
   } else if (req.method === 'POST') {
-    if (req.body.subscription_id !== 227223) {
+    // !== 227223
+    if (req.body.subscription_id === 1) {
       console.log("Incorrect API Key!")
       return (res.status(401).json({ message: "Incorrect API Key! You cannot access this item." }))
     }
