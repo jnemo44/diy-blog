@@ -49,7 +49,7 @@ export default async function handler(req, res) {
             {
               method: 'PUT',
               headers: {
-                Authorization: `Bearer ${token}`,
+                Authorization: `Bearer ${accessToken}`,
                 'Content-Type': 'application/json',
               },
               body: JSON.stringify({ "description": `${weatherIcon} ${weather.data[0].weather[0].main} 💨 Winds from ${convertWindDirection(Math.round(weather.data[0].wind_deg))} ${Math.round(weather.data[0].wind_speed)}mph ${'wind_gust' in weather.data[0] ? `gusting ${Math.round(weather.data[0].wind_gust)}mph` : ''}\r🌡️ Temp: ${Math.round(weather.data[0].temp)}F  💧 Dew Point: ${Math.round(weather.data[0].dew_point)}F  ✨ Felt Like: ${Math.round(weather.data[0].feels_like)}F` }),
