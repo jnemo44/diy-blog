@@ -1,7 +1,7 @@
 ---
 title: What's Next?
 date: 2023/2/10
-description: Week 16 training summary
+description: When am I gonna snag that OTQ?
 tag: running
 author: Joe Niemiec
 ---
