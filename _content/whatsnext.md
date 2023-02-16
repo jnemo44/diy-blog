@@ -5,7 +5,7 @@ description: When am I gonna snag that OTQ?
 tag: running
 author: Joe Niemiec
 ---
-Ok so I missed the OTQ standard by 186 seconds or roughly 7 seconds per mile so I guess it's time to hang up the shoes and call it a season...said no one ever...like my father used to tell me when I failed at something growing up. Joe you gotta get back on the horse. Well that's what I'm doing. I'm racing March 4th in Elizabeth City, NC at the inaugural Coast Guard Marathon!
+Ok so I missed the OTQ standard by 186 seconds or roughly 7 seconds per mile so I guess it's time to hang up the shoes and call it a season...said no one ever...like my father used to tell me when I failed at something growing up. Joe you gotta get back on the horse. Well that's what I'm doing. I'm racing March 4th in Elizabeth City, NC at the inaugural [Coast Guard Marathon!](https://coastguardmarathon.com/)
 
 **Here was my thought process...**
 
