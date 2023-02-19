@@ -32,7 +32,9 @@ export default async function handler(req, res) {
     else {
       // If aspect_type is 'create' && run && probably some other things GET strava activity by object ID
       if (req.body.aspect_type === 'create' || req.body.aspect_type === 'update') {
-        const { accessToken, units} = await updateStravaTokens(req.body.owner_id);
+        const { accessToken, units } = await updateStravaTokens(req.body.owner_id);
+        console.log("TOKEN")
+        console.log(accessToken)
         //const token = await db.collection('access_tokens').doc('W50yW2KWMFL2U0XJGbru').get()...token.data().access_token
         const activityData = await fetchStravaActivity(req.body.object_id, accessToken)
         // Use start time to pull weather data
