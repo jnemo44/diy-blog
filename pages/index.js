@@ -56,14 +56,14 @@ export default function Home({ posts, stravaStats }) {
 
 export async function getStaticProps() {
   const allPosts = getAllPosts();
-  const token = await updateStravaTokens(6689392);
+  const {newAccessToken, units} = await updateStravaTokens(6689392);
 
   // New tokens recieved now fetch stats data
   const resStats = await fetch(
     'https://www.strava.com/api/v3/athletes/6689392/stats',
     {
       headers: {
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer ${newAccessToken}`,
       },
     },
   )
