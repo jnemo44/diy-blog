@@ -58,7 +58,7 @@ export default async function handler(req, res) {
             {
               method: 'PUT',
               headers: {
-                Authorization: `Bearer ${token}`,
+                Authorization: `Bearer ${accessToken}`,
                 'Content-Type': 'application/json',
               },
               body: JSON.stringify({ "description": `${weatherIcon} ${weather.data[0].weather[0].main} 💨 Winds from ${convertWindDirection(Math.round(weather.data[0].wind_deg))} ${windSpeed} ${windGust}\r🌡️ Temp: ${temp}  💧 Dew Point: ${dewPoint}  ✨ Felt Like: ${feelsLikeTemp}` }),
