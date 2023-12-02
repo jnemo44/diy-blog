@@ -35,6 +35,9 @@ It's been short. 15 weeks. Probably the thing I'm the most "worried" about headi
 I am **VERY** excited to race CIM. It's one of those races everyone talks about and I've almost done it several times over the past few years but the stars never aligned. CIM has a well run elite program that provides bottle support (7 bottles total) and some other race day perks that make it a great option for OTQ hopefuls. That combined with the fact this is a last chance opportunity means that there should be a solid pack of 2:18 level guys.
 
 ### My Plan
-I am **NOT** going out faster then 5:20 for the first 5k. The lessons learned in [Houston](./postrace.md) are still very fresh in my mind. Since there will be an OTQ pacer and large pack though I'll just have to balance doing my own thing after 5k or 10k or getting the beneifts of running in a group. But **I WILL NOT GO FASTER THEN 5:15 IN THE FIRST 10miles!**. To aid in pacing this will be my first race using the PacPro feature on Garmin which should help guide my decision making when my brain turns to mush. Other then that it's fuel every 4 miles and just run smart.
+I am **NOT** going out faster then 5:20 for the first 5k. The lessons learned in [Houston](./postrace.md) are still very fresh in my mind. Since there will be an OTQ pacer and large pack though I'll just have to balance doing my own thing after 5k or 10k or getting the beneifts of running in a group. But **I WILL NOT GO FASTER THEN 5:15 IN THE FIRST 10miles!**. To aid in pacing this will be my first race using the PacPro feature on Garmin which should help guide my decision making when my brain turns to mush. Other then that it's fuel every 4 miles and just run smart. I am racing in Saucony En
+
+### Summary
+
 
 
