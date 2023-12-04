@@ -56,7 +56,7 @@ export default function Home({ posts, stravaStats }) {
 
 export async function getStaticProps() {
   const allPosts = getAllPosts();
-  const token = await updateStravaTokens();
+  const token = await updateStravaTokens(process.env.STRAVA_OWNER_ID);
 
   // New tokens recieved now fetch stats data
   const resStats = await fetch(

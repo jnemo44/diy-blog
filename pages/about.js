@@ -19,16 +19,23 @@ export default function About() {
           <p>{"Hi! I'm Joe."}</p>
 
           <p>
-            {"I'm a full time flight test engineer 🛩️ that's still trying to decide what I want to be when I grow up 🧙. I love running and enjoy building things online so this is my space to combine 🏃‍♂️ ➕ 💻."}
+            {"I love running and enjoy building things online so this is my space to combine 🏃‍♂️ ➕ 💻. I use this blog as a journal to help me process my running so it's pretty raw and unbeautiful."}
           </p>
           <p>
             {/* {"Follow along as I test web development ideas and write about the glamorous life of a semi-pro runner!"} */}
-            {"I'm currently training to qualify for the US Olympic Marathon Trials (sub 2:18) in 2024. Along the way I am representing an awesome organization called Operation Underground Railroad in their fight to end slavery! "}
+            {"After qualifying in 2020 for the US Olympic Marathon Trials (2:17:15) I was training to qualify again for the 2024 trials (sub 2:18), but fell short after three attempts. Along the way I represented an awesome organization called Operation Underground Railroad in their fight to end slavery! "}
             {"If you'd like to support me in this goal checkout the link below!"}
           </p>
 
           <p className="flex justify-center">
           <div className="font-bold text-xl"><a href="https://www.gofundme.com/f/elite-racing-benefitting-our?utm_campaign=p_cf+share-flow-1&utm_medium=copy_link&utm_source=customer"> Join the Fight!</a></div>
+          </p>
+
+          <p>
+            {"I've also recently launched LelliWeather which is quick way to have weather details added to every outdoor Strava activity that you upload. Free for 90 days. Check it out!"}
+          </p>
+          <p className="flex justify-center">
+            <div className="font-bold text-xl"><a href="https://www.lelliweather.app/"> Add weather to Strava activities</a></div>
           </p>
 
           <p>
