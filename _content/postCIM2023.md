@@ -24,6 +24,12 @@ For this race I represented Operation Underground Railroad, which is an organiza
 
 ## Race Stats
 
+[My Result](https://www.athlinks.com/event/3241/results/Event/1067161/Course/2421871/Bib/61)
+
+* 2:25:35 Chip 5:33 min/mile Avg
+* 135/9212 Overall
+* 48/66 Elite Field
+
 **GPS Split** - This is what Garmin says mile paces were post race.
 <div className="overflow-x-auto">
 <table className="min-w-full inline-block text-left">
