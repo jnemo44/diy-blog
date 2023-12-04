@@ -63,7 +63,7 @@ For this race I represented Operation Underground Railroad, which is an organiza
   <tr className="bg-white border-b-2 border-green-500 dark:bg-slate-800">
     <td className="py-4 px-6">5</td>
     <td className="py-4 px-6">5:05</td>
-    <td className="py-4 px-6">Just in the group</td>
+    <td className="py-4 px-6">Just running in the massive OTQ group.</td>
   </tr>
   <tr className="bg-white border-b-2 border-green-500 dark:bg-slate-800">
     <td className="py-4 px-6">6</td>
@@ -73,12 +73,12 @@ For this race I represented Operation Underground Railroad, which is an organiza
   <tr className="bg-white border-b-2 border-green-500 dark:bg-slate-800">
     <td className="py-4 px-6">7</td>
     <td className="py-4 px-6">5:15</td>
-    <td className="py-4 px-6">Felt great told myself this is the day. But remember the race doesn't start till 16</td>
+    <td className="py-4 px-6">Felt great told myself this is the day. But reminded myself to stay calm. The race doesn't start till 16 and 20 is half.</td>
   </tr>
   <tr className="bg-white border-b-2 border-green-500 dark:bg-slate-800">
     <td className="py-4 px-6">8</td>
     <td className="py-4 px-6">5:17</td>
-    <td className="py-4 px-6">NA</td>
+    <td className="py-4 px-6">Rolling through the hills still within myself taking fuel well.</td>
   </tr>
   <tr className="bg-white border-b-2 border-green-500 dark:bg-slate-800">
     <td className="py-4 px-6">9</td>
