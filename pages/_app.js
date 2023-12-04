@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps}) {
       <header className='flex w-full justify-between space-x-4'>
         <Link href="/"><a className="text-2xl font-bold my-4 whitespace-nowrap">Joe Niemiec</a></Link>
         {/* <div className="hidden font-bold sm:flex place-self-center whitespace-nowrap">Next race: {Math.round((raceDate - currentDate) / (1000 * 3600 * 24))} days </div> */}
-        <a href="" className="hidden font-bold sm:flex place-self-center whitespace-nowrap" target="_blank" rel="noopener noreferrer">Add weather to Strava runs</a>
+        <a href="https://www.lelliweather.app/" className="hidden font-bold sm:flex place-self-center whitespace-nowrap" target="_blank" rel="noopener noreferrer">Add weather to Strava runs</a>
         <nav className="place-self-center pr-2">
           <div className="flex space-x-4 font-bold">
             <Link href="/"><a>Home</a></Link>
