@@ -2,14 +2,5 @@ This is my personal website
 
 ## Getting Started
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
+On 12/4/2023 I switched off the supabase branch back to main branch, because I forgot supabase branch exsisted.
 
